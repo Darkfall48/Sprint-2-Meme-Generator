@@ -1,0 +1,11 @@
+/** awesome **/
+
+/* solid */
+@font-face {
+  font-family: awe-solid;
+  src: url('../../Fonts/Awesome/fa-solid-900.ttf');
+}
+
+.awe-pallette::before {
+  content: '\f53f';
+}

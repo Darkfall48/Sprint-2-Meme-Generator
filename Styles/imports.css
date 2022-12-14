@@ -2,5 +2,8 @@
 @import './Basics/base.css';
 
 /* Setup */
+@import './Basics/vars.css';
+@import './Basics/fonts.css';
+@import './Basics/icons.css';
 
 /* Cmps */

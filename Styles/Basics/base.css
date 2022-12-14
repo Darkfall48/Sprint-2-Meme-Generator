@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Lato, sans-serif;
+  color: var(--clr2);
+  /* line-height: 1.25em; */
+  letter-spacing: 0.48px;
+  line-height: 1.13;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 1em;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  font-size: 1em;
+}

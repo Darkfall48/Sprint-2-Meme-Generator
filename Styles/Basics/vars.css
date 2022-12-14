@@ -1,0 +1,28 @@
+:root {
+  /** pallete **/
+  /* header color */
+  --clr0: #292929;
+  /* brand color */
+  --clr1: #58c93a;
+  /* paragraph color */
+  --clr2: #606060;
+  /* card title color */
+  --clr3: #4f4e4e;
+  /* white color */
+  --clr4: #ffffff;
+  /* border color  */
+  --clr5: #e1e0e0;
+  /* card border color */
+  --clr6: #c2c2c2;
+  /* a footer color */
+  --clr7: #818181;
+  /* footer bg */
+  --clr8: #f8f8f8;
+  /* footer CR */
+  --clr9: #a6a6a6;
+
+  /** bp **/
+  --s: 600px;
+  --m: 740px;
+  --l: 980px;
+}
