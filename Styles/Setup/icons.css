@@ -3,7 +3,7 @@
 /* solid */
 @font-face {
   font-family: awe-solid;
-  src: url('https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/7e6abb59a95c6ca4d0d34af78fd58b281209f1cb/Fonts/Awesome/fa-solid-900.ttf');
+  src: url('../../Fonts/Awesome/fa-solid-900.ttf');
 }
 .awe-solid::before {
   font-family: awe-solid;

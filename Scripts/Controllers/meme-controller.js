@@ -40,7 +40,7 @@ function drawImgFromRemote(image) {
 function drawTxt() {
   const meme = getMeme()
 
-  // TODO: Add Multiple Lines
+  //? DONE: Add Multiple Lines
   let lines = meme.lines
   lines.forEach((line) => {
     const { txt, size, color, strokeColor, align, pos } = line
