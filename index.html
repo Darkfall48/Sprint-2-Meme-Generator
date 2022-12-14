@@ -10,7 +10,7 @@
     />
     <title>Meme Generator - By Sidney Sebban</title>
   </head>
-  <body class="main-layout">
+  <body class="main-layout" onload="onInitGallery()">
     <header class="main-header main-layout">
       <div class="logo">Logo</div>
       <nav class="main-nav">
@@ -28,6 +28,7 @@
         </ul>
       </nav>
     </header>
+
     <main class="main-content">
       <section class="gallery-section">
         <nav class="gallery-nav">
@@ -46,13 +47,14 @@
             <li><button>More</button></li>
           </ul>
         </nav>
-        <article class="gallery-container">Images..</article>
+        <article class="gallery-container"></article>
       </section>
 
       <section class="meme-section">
         <article class="canvas-container">
           <canvas class="meme-canvas" height="450" width="450">Canvas</canvas>
         </article>
+
         <aside class="editor-nav-container">
           <nav class="editor-nav">
             <ul class="editor-nav-list">
@@ -70,18 +72,20 @@
                   <button>Move Up</button>
                   <button>Move Down</button>
                   <button>Switch Line</button>
-                  <button>Remove</button>
+                  <button class="awe-solid awe-delete">Remove</button>
                 </li>
               </ul>
               <ul class="editor-text-control-list">
                 <li>
                   <button>Increase Size</button>
                   <button>Decrease Size</button>
-                  <button>Text Color</button>
+                  <button class="awe-solid awe-pallette">Text Color</button>
                   <button>Stroke Color</button>
-                  <button>Align Left</button>
-                  <button>Align Center</button>
-                  <button>Align Right</button>
+                  <button class="awe-solid awe-align-left">Align Left</button>
+                  <button class="awe-solid awe-align-center">
+                    Align Center
+                  </button>
+                  <button class="awe-solid awe-align-right">Align Right</button>
                 </li>
               </ul>
               <ul class="editor-sticker-list">
@@ -93,9 +97,9 @@
               </ul>
               <ul class="editor-save-list">
                 <li>
-                  <button>Save</button>
-                  <button>Download</button>
-                  <button>Publish</button>
+                  <button class="awe-solid awe-save">Save</button>
+                  <button class="awe-solid awe-publish">Upload</button>
+                  <button class="awe-solid awe-share">Share</button>
                 </li>
               </ul>
             </ul>
@@ -103,6 +107,7 @@
         </aside>
       </section>
     </main>
+
     <footer class="main-layout-footer">
       <small class="owner-credentials">&copy Made By Sidney Sebban</small>
     </footer>
@@ -113,6 +118,7 @@
     <script src="./Scripts/Controllers/gallery-controller.js"></script>
     <script src="./Scripts/Controllers/meme-controller.js"></script>
     <!--* Services *-->
+    <script src="./Scripts/Services/gallery-service.js"></script>
     <script src="./Scripts/Services/utils-service.js"></script>
     <script src="./Scripts/Services/storage-service.js"></script>
     <script src="./Scripts/Services/meme-service.js"></script>

@@ -1,0 +1,6 @@
+.main-layout > *:not(.full) {
+  /* max-width: 980px; */
+  max-width: var(--l);
+  margin-left: auto;
+  margin-right: auto;
+}

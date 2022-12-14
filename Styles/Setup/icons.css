@@ -1,0 +1,47 @@
+/** awesome **/
+
+/* solid */
+@font-face {
+  font-family: awe-solid;
+  src: url('../../Fonts/Awesome/fa-solid-900.ttf');
+}
+.awe-solid::before {
+  font-family: awe-solid;
+}
+
+.awe-solid.awe-delete::before {
+  content: '\f1f8';
+}
+
+.awe-solid.awe-align-left::before {
+  content: '\f036';
+}
+.awe-solid.awe-align-center::before {
+  content: '\f037';
+}
+.awe-solid.awe-align-right::before {
+  content: '\f038';
+}
+
+.awe-solid.awe-pallette::before {
+  content: '\f53f';
+}
+
+.awe-solid.awe-share::before {
+  content: '\f1e0';
+}
+.awe-solid.awe-save::before {
+  content: '\e094';
+}
+.awe-solid.awe-publish::before {
+  content: '\e09a';
+}
+
+/* regular */
+@font-face {
+  font-family: awe-regular;
+  src: url('../../Fonts/Awesome/fa-regular-400.ttf');
+}
+.awe-regular::before {
+  font-family: awe-regular;
+}

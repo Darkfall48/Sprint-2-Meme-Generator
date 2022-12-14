@@ -1,9 +1,12 @@
 /* Basic */
 @import './Basics/base.css';
+@import './Basics/helpers.css';
+@import './Basics/layouts.css';
 
 /* Setup */
-@import './Basics/vars.css';
-@import './Basics/fonts.css';
-@import './Basics/icons.css';
+@import './Setup/vars.css';
+@import './Setup/fonts.css';
+@import './Setup/icons.css';
 
 /* Cmps */
+@import './Cmps/header.css';

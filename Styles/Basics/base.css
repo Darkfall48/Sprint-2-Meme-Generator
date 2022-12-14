@@ -3,19 +3,17 @@
 }
 
 html {
-  font-family: Lato, sans-serif;
-  color: var(--clr2);
-  /* line-height: 1.25em; */
-  letter-spacing: 0.48px;
-  line-height: 1.13;
+  font-family: poppins-regular, sans-serif;
 }
 
 body {
   margin: 0;
+  background-color: #22252c;
+  color: #ffffff;
 }
 
 img {
-  width: 100%;
+  width: 150px;
 }
 
 h1,
