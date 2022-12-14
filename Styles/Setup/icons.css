@@ -9,6 +9,12 @@
   font-family: awe-solid;
 }
 
+.awe-solid.awe-add::before {
+  content: '\2b';
+}
+.awe-solid.awe-switch::before {
+  content: '\f034';
+}
 .awe-solid.awe-delete::before {
   content: '\f1f8';
 }
@@ -31,10 +37,30 @@
   content: '\f1e0';
 }
 .awe-solid.awe-save::before {
-  content: '\e094';
+  content: '\f019';
 }
 .awe-solid.awe-publish::before {
   content: '\e09a';
+}
+
+.awe-solid.awe-up::before {
+  content: '\f106';
+}
+.awe-solid.awe-down::before {
+  content: '\f107';
+}
+.awe-solid.awe-left::before {
+  content: '\f104';
+}
+.awe-solid.awe-right::before {
+  content: '\f105';
+}
+
+.awe-solid.awe-decrease::before {
+  content: '\f422';
+}
+.awe-solid.awe-increase::before {
+  content: '\f424';
 }
 
 /* regular */

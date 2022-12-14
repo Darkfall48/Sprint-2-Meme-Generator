@@ -3,7 +3,6 @@
 let gCanvas
 let gCtx
 
-let gCurrentLine = 0
 let gPos
 
 // let gOffPos = {}
@@ -14,7 +13,7 @@ function onInitMeme() {
   // initMeme()
   gCanvas = document.querySelector('.meme-canvas')
   gCtx = gCanvas.getContext('2d')
-  gPos = { x: gCanvas.width / 2, y: gCanvas.height / 2 }
+  // gPos = { x: gCanvas.width / 2, y: gCanvas.height / 2 }
   addEventListeners()
 
   renderMeme()
@@ -24,7 +23,6 @@ function onInitMeme() {
 function renderMeme() {
   const meme = getMeme()
   const image = getImageById(meme.selectedImgId)
-  clearCanvas()
   drawImgFromRemote(image)
 }
 
@@ -32,6 +30,7 @@ function drawImgFromRemote(image) {
   const img = new Image()
   img.src = image.url
   img.onload = () => {
+    clearCanvas()
     gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height)
     drawTxt()
   }
@@ -41,19 +40,21 @@ function drawTxt() {
   const meme = getMeme()
 
   // TODO: Add Multiple Lines
-  let line = meme.lines[gCurrentLine]
-  const { txt, size, color, strokeColor, align } = line
-  console.log(line)
+  let lines = meme.lines
+  lines.forEach((line) => {
+    const { txt, size, color, strokeColor, align, pos } = line
+    const { x, y } = pos
+    console.log(line)
 
-  gCtx.lineWidth = 2
-  gCtx.strokeStyle = strokeColor
-  gCtx.fillStyle = color
-  gCtx.font = size + 'px arial'
-  gCtx.textAlign = align
-  gCtx.textBaseline = 'middle'
-
-  gCtx.fillText(txt, gPos.x, gPos.y) // Draws (fills) a given text at the given (x, y) position.
-  gCtx.strokeText(txt, gPos.x, gPos.y) // Draws (strokes) a given text at the given (x, y) position.
+    gCtx.lineWidth = 2
+    gCtx.strokeStyle = strokeColor
+    gCtx.fillStyle = color
+    gCtx.font = size + 'px arial'
+    gCtx.textAlign = align
+    gCtx.textBaseline = 'middle'
+    gCtx.fillText(txt, x, y) // Draws (fills) a given text at the given (x, y) position.
+    gCtx.strokeText(txt, x, y) // Draws (strokes) a given text at the given (x, y) position.
+  })
 }
 
 function clearCanvas() {
@@ -87,11 +88,14 @@ function addEventListeners() {
 
   gCanvas.addEventListener('mousemove', (e) => {
     if (!gIsMoving) return
+    const meme = getMeme()
     const { offsetX, offsetY } = e
     // gOffPos.x = offsetX
     // gOffPos.y = offsetY
-    gPos.x = offsetX
-    gPos.y = offsetY
+    // gPos.x = offsetX
+    // gPos.y = offsetY
+    meme.lines[meme.selectedLineIdx].pos.x = offsetX
+    meme.lines[meme.selectedLineIdx].pos.y = offsetY
     renderMeme()
     // console.log('offsetX, offsetY:', offsetX, offsetY)
   })
@@ -126,46 +130,58 @@ function resizeCanvas() {
 
 function setTextColor(value) {
   const meme = getMeme()
-  meme.lines[gCurrentLine].color = value
+  meme.lines[meme.selectedLineIdx].color = value
   renderMeme()
 }
 
 function setTextStrokeColor(value) {
   const meme = getMeme()
-  meme.lines[gCurrentLine].strokeColor = value
+  meme.lines[meme.selectedLineIdx].strokeColor = value
   renderMeme()
 }
 
 function setAlignment(value) {
   const meme = getMeme()
-  meme.lines[gCurrentLine].align = value
+  meme.lines[meme.selectedLineIdx].align = value
   switch (value) {
     case 'left':
-      gPos.x = 0
+      meme.lines[meme.selectedLineIdx].pos.x = 0
       break
     case 'right':
-      gPos.x = gPos.x = gCanvas.width
+      meme.lines[meme.selectedLineIdx].pos.x = gCanvas.width
       break
 
     default:
-      gPos.x = gCanvas.width / 2
+      meme.lines[meme.selectedLineIdx].pos.x = gCanvas.width / 2
       break
   }
   renderMeme()
 }
 
 function moveVertical(value) {
-  gPos.y += value
+  const meme = getMeme()
+  meme.lines[meme.selectedLineIdx].pos.y += value
   renderMeme()
 }
 
 function moveHorizontal(value) {
-  gPos.x += value
+  const meme = getMeme()
+  meme.lines[meme.selectedLineIdx].pos.x += value
   renderMeme()
 }
 
 function changeSize(value) {
   const meme = getMeme()
-  meme.lines[gCurrentLine].size += value
+  meme.lines[meme.selectedLineIdx].size += value
+  renderMeme()
+}
+
+function onAddLine() {
+  createLine()
+  renderMeme()
+}
+
+function onDeleteLine() {
+  deleteLine()
   renderMeme()
 }

@@ -33,7 +33,7 @@
       <section class="gallery-section">
         <nav class="gallery-nav">
           <ul class="gallery-nav-list">
-            <li><button>Upload</button></li>
+            <li><input type="file" /></li>
             <li>
               <div class="search-bar">
                 <input
@@ -69,23 +69,68 @@
               </li>
               <ul class="editor-input-list">
                 <li>
-                  <button>Add Line</button>
-                  <button onclick="moveVertical(-10)">Move Up</button>
-                  <button onclick="moveVertical(10)">Move Down</button>
-                  <button onclick="moveHorizontal(-10)">Move Left</button>
-                  <button onclick="moveHorizontal(10)">Move Right</button>
-                  <button>Switch Line</button>
-                  <button class="awe-solid awe-delete">Remove</button>
+                  <button
+                    onclick="onAddLine()"
+                    class="awe-solid awe-add"
+                    title="Add Line"
+                  >
+                    Add Line
+                  </button>
+                  <button
+                    class="awe-solid awe-up"
+                    onclick="moveVertical(-10)"
+                    title="Move Up"
+                  ></button>
+                  <button
+                    class="awe-solid awe-down"
+                    onclick="moveVertical(10)"
+                    title="Move Down"
+                  ></button>
+                  <button
+                    class="awe-solid awe-left"
+                    onclick="moveHorizontal(-10)"
+                    title="Move Left"
+                  ></button>
+                  <button
+                    class="awe-solid awe-right"
+                    onclick="moveHorizontal(10)"
+                    title="Move Right"
+                  ></button>
+                  <button
+                    class="awe-solid awe-switch"
+                    title="Switch Line"
+                    onclick="switchLine()"
+                  >
+                    Switch Line
+                  </button>
+                  <button
+                    onclick="onDeleteLine()"
+                    class="awe-solid awe-delete"
+                    title="Remove Line"
+                  >
+                    Remove
+                  </button>
                 </li>
               </ul>
               <ul class="editor-text-control-list">
                 <li>
-                  <button onclick="changeSize(5)">Increase Size</button>
-                  <button onclick="changeSize(-5)">Decrease Size</button>
+                  <button
+                    class="awe-solid awe-increase"
+                    onclick="changeSize(5)"
+                    title="Increase Text Size"
+                  ></button>
+                  <button
+                    class="awe-solid awe-decrease"
+                    onclick="changeSize(-5)"
+                    title="Decrease Text Size"
+                  ></button>
                   <button class="awe-solid awe-pallette" title="Set Text Color">
                     <input type="color" onchange="setTextColor(value)" />
                   </button>
-                  <button title="Set Text Stroke Color">
+                  <button
+                    class="awe-solid awe-pallette"
+                    title="Set Text Stroke Color"
+                  >
                     <input type="color" onchange="setTextStrokeColor(value)" />
                   </button>
                   <button

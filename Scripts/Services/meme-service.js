@@ -15,6 +15,15 @@ let gMeme = {
       align: 'center',
       color: 'red',
       strokeColor: 'black',
+      pos: { x: 150, y: 150 },
+    },
+    {
+      txt: 'My cat is the best',
+      size: 20,
+      align: 'center',
+      color: 'red',
+      strokeColor: 'black',
+      pos: { x: 150, y: 120 },
     },
   ],
 }
@@ -25,19 +34,50 @@ function openEditor() {
   onInitMeme()
 }
 
+function getMeme() {
+  return gMeme
+}
+
 function setMeme(imageId) {
   gMeme.selectedImgId = imageId
 }
 
 function setLineTxt(value) {
-  // TODO: Add Multiple Lines
-  let currentLine = 0
-  gMeme.lines[currentLine].txt = value
+  //? DONE: Add Multiple Lines
+  gMeme.lines[gMeme.selectedLineIdx].txt = value
   renderMeme()
 }
 
-function getMeme() {
-  return gMeme
+function switchLine() {
+  gMeme.lines.length - 1 === gMeme.selectedLineIdx
+    ? (gMeme.selectedLineIdx = 0)
+    : gMeme.selectedLineIdx++
+  // console.log('Current Line is', gMeme.selectedLineIdx)
+}
+
+function createLine() {
+  let line = {
+    txt: 'New Line',
+    size: 20,
+    align: 'center',
+    color: 'red',
+    strokeColor: 'black',
+    pos: { x: 150, y: getRandomIntInclusive(12, 400) },
+  }
+  gMeme.lines.push(line)
+  gMeme.selectedLineIdx = gMeme.lines.length - 1
+}
+
+function deleteLine() {
+  if (!gMeme.lines.length || !gMeme.lines) return
+
+  if (gMeme.lines.length > gMeme.selectedLineIdx) {
+    gMeme.lines.splice(gMeme.selectedLineIdx, 1)
+    gMeme.selectedLineIdx = gMeme.lines.length - 1
+    console.log('Line', gMeme.selectedLineIdx, 'removed.')
+  } else {
+    gMeme.selectedLineIdx = gMeme.lines.length - 1
+  }
 }
 
 //* Not implemented yet
