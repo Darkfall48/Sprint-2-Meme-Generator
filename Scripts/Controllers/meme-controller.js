@@ -29,7 +29,7 @@ function renderMeme() {
 function drawImgFromRemote(image) {
   const img = new Image()
   img.src = image.url
-  img.crossOrigin = 'anonymous'
+  // img.crossOrigin = 'anonymous'
   img.onload = () => {
     clearCanvas()
     gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height)
@@ -187,6 +187,7 @@ function onDeleteLine() {
   renderMeme()
 }
 
+// ! Not working, Github Cross Origin not allowed
 function downloadMeme(elLink) {
   const data = gCanvas.toDataURL()
   elLink.href = data
