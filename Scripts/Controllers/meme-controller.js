@@ -190,4 +190,5 @@ function onDeleteLine() {
 function downloadMeme(elLink) {
   const data = gCanvas.toDataURL()
   elLink.href = data
+  console.log(data)
 }
