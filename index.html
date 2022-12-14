@@ -10,5 +10,111 @@
     />
     <title>Meme Generator - By Sidney Sebban</title>
   </head>
-  <body></body>
+  <body class="main-layout">
+    <header class="main-header main-layout">
+      <div class="logo">Logo</div>
+      <nav class="main-nav">
+        <ul class="main-nav-list clean-list">
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Memes</a></li>
+          <li><a href="#">About</a></li>
+          <li class="dropdown-langs">
+            <select name="dropdown-langs-content" id="dropdown-langs-content">
+              <option value="en">English</option>
+              <option value="fr">French</option>
+              <option value="he">Hebrew</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-content">
+      <section class="gallery-section">
+        <nav class="gallery-nav">
+          <ul class="gallery-nav-list">
+            <li><button>Upload</button></li>
+            <li>
+              <div class="search-bar">
+                <input
+                  type="text"
+                  name="search-bar-value"
+                  id="search-bar-value"
+                  placeholder="Search by Keywords"
+                /><a class="search-icon">Search Icon</a>
+              </div>
+            </li>
+            <li><button>More</button></li>
+          </ul>
+        </nav>
+        <article class="gallery-container">Images..</article>
+      </section>
+
+      <section class="meme-section">
+        <article class="canvas-container">
+          <canvas class="meme-canvas" height="450" width="450">Canvas</canvas>
+        </article>
+        <aside class="editor-nav-container">
+          <nav class="editor-nav">
+            <ul class="editor-nav-list">
+              <li>
+                <input
+                  type="text"
+                  name="text-input-editor"
+                  id="text-input-editor"
+                  placeholder="Insert Text"
+                />
+              </li>
+              <ul class="editor-input-list">
+                <li>
+                  <button>Add Line</button>
+                  <button>Move Up</button>
+                  <button>Move Down</button>
+                  <button>Switch Line</button>
+                  <button>Remove</button>
+                </li>
+              </ul>
+              <ul class="editor-text-control-list">
+                <li>
+                  <button>Increase Size</button>
+                  <button>Decrease Size</button>
+                  <button>Text Color</button>
+                  <button>Stroke Color</button>
+                  <button>Align Left</button>
+                  <button>Align Center</button>
+                  <button>Align Right</button>
+                </li>
+              </ul>
+              <ul class="editor-sticker-list">
+                <li>
+                  <button>Left</button>
+                  <div>Stickers Container</div>
+                  <button>Right</button>
+                </li>
+              </ul>
+              <ul class="editor-save-list">
+                <li>
+                  <button>Save</button>
+                  <button>Download</button>
+                  <button>Publish</button>
+                </li>
+              </ul>
+            </ul>
+          </nav>
+        </aside>
+      </section>
+    </main>
+    <footer class="main-layout-footer">
+      <small class="owner-credentials">&copy Made By Sidney Sebban</small>
+    </footer>
+
+    <!--* Libraries *-->
+    <script src="./Libs/hammer.min.js"></script>
+    <!--* Controllers *-->
+    <script src="./Scripts/Controllers/gallery-controller.js"></script>
+    <script src="./Scripts/Controllers/meme-controller.js"></script>
+    <!--* Services *-->
+    <script src="./Scripts/Services/utils-service.js"></script>
+    <script src="./Scripts/Services/storage-service.js"></script>
+    <script src="./Scripts/Services/meme-service.js"></script>
+  </body>
 </html>
