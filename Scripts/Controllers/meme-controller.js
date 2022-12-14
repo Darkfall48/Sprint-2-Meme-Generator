@@ -29,6 +29,7 @@ function renderMeme() {
 function drawImgFromRemote(image) {
   const img = new Image()
   img.src = image.url
+  img.crossOrigin = 'anonymous'
   img.onload = () => {
     clearCanvas()
     gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height)
@@ -184,4 +185,9 @@ function onAddLine() {
 function onDeleteLine() {
   deleteLine()
   renderMeme()
+}
+
+function downloadMeme(elLink) {
+  const data = gCanvas.toDataURL()
+  elLink.href = data
 }
