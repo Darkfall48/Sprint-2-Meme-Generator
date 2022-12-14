@@ -64,28 +64,48 @@
                   name="text-input-editor"
                   id="text-input-editor"
                   placeholder="Insert Text"
+                  onchange="setLineTxt(value)"
                 />
               </li>
               <ul class="editor-input-list">
                 <li>
                   <button>Add Line</button>
-                  <button>Move Up</button>
-                  <button>Move Down</button>
+                  <button onclick="moveVertical(-10)">Move Up</button>
+                  <button onclick="moveVertical(10)">Move Down</button>
+                  <button onclick="moveHorizontal(-10)">Move Left</button>
+                  <button onclick="moveHorizontal(10)">Move Right</button>
                   <button>Switch Line</button>
                   <button class="awe-solid awe-delete">Remove</button>
                 </li>
               </ul>
               <ul class="editor-text-control-list">
                 <li>
-                  <button>Increase Size</button>
-                  <button>Decrease Size</button>
-                  <button class="awe-solid awe-pallette">Text Color</button>
-                  <button>Stroke Color</button>
-                  <button class="awe-solid awe-align-left">Align Left</button>
-                  <button class="awe-solid awe-align-center">
+                  <button onclick="changeSize(5)">Increase Size</button>
+                  <button onclick="changeSize(-5)">Decrease Size</button>
+                  <button class="awe-solid awe-pallette" title="Set Text Color">
+                    <input type="color" onchange="setTextColor(value)" />
+                  </button>
+                  <button title="Set Text Stroke Color">
+                    <input type="color" onchange="setTextStrokeColor(value)" />
+                  </button>
+                  <button
+                    class="awe-solid awe-align-left"
+                    onclick="setAlignment('left')"
+                  >
+                    Align Left
+                  </button>
+                  <button
+                    class="awe-solid awe-align-center"
+                    onclick="setAlignment('center')"
+                  >
                     Align Center
                   </button>
-                  <button class="awe-solid awe-align-right">Align Right</button>
+                  <button
+                    class="awe-solid awe-align-right"
+                    onclick="setAlignment('right')"
+                  >
+                    Align Right
+                  </button>
                 </li>
               </ul>
               <ul class="editor-sticker-list">
