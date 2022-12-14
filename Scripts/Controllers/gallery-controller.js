@@ -13,7 +13,7 @@ function renderGallery() {
   images
     .map((image, idx) => {
       const { id, url } = image
-      imagesHTMLs += `<img data-id="${id}" src="${url}" onclick="onImageClicked('${id}')" alt="${
+      imagesHTMLs += `<img class="image" data-id="${id}" src="${url}" onclick="onImageClicked('${id}')" alt="${
         idx + 1
       }"/>`
     })

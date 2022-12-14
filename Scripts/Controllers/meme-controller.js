@@ -50,7 +50,7 @@ function drawTxt() {
     gCtx.lineWidth = 2
     gCtx.strokeStyle = strokeColor
     gCtx.fillStyle = color
-    gCtx.font = size + 'px arial'
+    gCtx.font = size + 'px impact'
     gCtx.textAlign = align
     gCtx.textBaseline = 'middle'
     gCtx.fillText(txt, x, y) // Draws (fills) a given text at the given (x, y) position.

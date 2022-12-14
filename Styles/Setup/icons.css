@@ -63,6 +63,10 @@
   content: '\f424';
 }
 
+.awe-solid.awe-search::before {
+  content: '\f002';
+}
+
 /* regular */
 @font-face {
   font-family: awe-regular;
