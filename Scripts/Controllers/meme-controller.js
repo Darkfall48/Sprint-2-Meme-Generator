@@ -6,6 +6,10 @@ let gCtx
 let gCurrentLine = 0
 let gPos
 
+// let gOffPos = {}
+
+let gIsMoving
+
 function onInitMeme() {
   // initMeme()
   gCanvas = document.querySelector('.meme-canvas')
@@ -16,7 +20,7 @@ function onInitMeme() {
   renderMeme()
 }
 
-// TODO: renders an image on the canvas and a line of text on top
+//? DONE: renders an image on the canvas and a line of text on top
 function renderMeme() {
   const meme = getMeme()
   const image = getImageById(meme.selectedImgId)
@@ -55,14 +59,62 @@ function drawTxt() {
 function clearCanvas() {
   gCtx.clearRect(0, 0, gCanvas.width, gCanvas.height)
   console.log('Canvas is cleaned')
-  console.clear()
+  // console.clear()
 }
 
 function addEventListeners() {
+  // let moveDetect = new Hammer(gCanvas)
+  // moveDetect.add(
+  //   new Hammer.Pan({ direction: Hammer.DIRECTION_ALL, threshold: 0 })
+  // )
+  // moveDetect.on('pan', (ev) => {
+  //   console.log(ev)
+  //   console.log(ev.offsetDirection)
+  //   gPos.x = gOffPos.x
+  //   gPos.y = gOffPos.y
+  //   renderMeme()
+  // })
+
+  gCanvas.addEventListener('mousedown', (e) => {
+    gIsMoving = true
+    document.body.style.cursor = 'grabbing'
+  })
+
+  gCanvas.addEventListener('mouseup', (e) => {
+    gIsMoving = false
+    document.body.style.cursor = 'auto'
+  })
+
+  gCanvas.addEventListener('mousemove', (e) => {
+    if (!gIsMoving) return
+    const { offsetX, offsetY } = e
+    // gOffPos.x = offsetX
+    // gOffPos.y = offsetY
+    gPos.x = offsetX
+    gPos.y = offsetY
+    renderMeme()
+    // console.log('offsetX, offsetY:', offsetX, offsetY)
+  })
+
+  // ! Mobile not working
+  // gCanvas.addEventListener('touchestart', (e) => (gIsMoving = true))
+  // gCanvas.addEventListener('touchend', (e) => (gIsMoving = false))
+  // gCanvas.addEventListener('touchmove', (e) => {
+  //   if (!gIsMoving) return
+  //   const { offsetX, offsetY } = e
+  //   // gOffPos.x = offsetX
+  //   // gOffPos.y = offsetY
+  //   gPos.x = offsetX
+  //   gPos.y = offsetY
+  //   renderMeme()
+  //   console.log('offsetX, offsetY:', offsetX, offsetY)
+  // })
+
   window.addEventListener('resize', () => {
     // gStx.save() // Saves the current drawing style state using a stack.
     // ! Not Working Currently
     // resizeCanvas()
+    // renderMeme()
     // gStx.restore() // Restores the drawing style state to the last element on the 'state stack' saved by save().
   })
 }
