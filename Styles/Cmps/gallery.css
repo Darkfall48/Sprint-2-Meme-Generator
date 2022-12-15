@@ -1,6 +1,8 @@
 /** Gallery **/
 .gallery-section {
   padding: 30px;
+  margin-bottom: 16px;
+  place-content: center;
 }
 
 /** Nav **/
@@ -47,11 +49,6 @@
 #search-bar-value {
   font-size: 1.3125em;
   font-family: poppins-regular;
-  background: transparent;
-  border: none;
-  display: block;
-  outline: none;
-  margin: 0 auto;
   padding: 10px;
   color: rgb(252, 252, 252);
 }

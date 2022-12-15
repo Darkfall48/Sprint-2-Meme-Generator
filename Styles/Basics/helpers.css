@@ -9,3 +9,11 @@
   padding: 0;
   text-decoration: none;
 }
+
+.clean-input {
+  background: transparent;
+  border: none;
+  display: block;
+  outline: none;
+  margin: 0 auto;
+}

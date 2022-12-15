@@ -32,6 +32,12 @@
 .awe-solid.awe-pallette::before {
   content: '\f53f';
 }
+.awe-solid.awe-s::before {
+  content: '\53';
+}
+.awe-solid.awe-t::before {
+  content: '\54';
+}
 
 .awe-solid.awe-share::before {
   content: '\f1e0';
@@ -54,6 +60,13 @@
 }
 .awe-solid.awe-right::before {
   content: '\f105';
+}
+
+.awe-solid.awe-c-left::before {
+  content: '\f0d9';
+}
+.awe-solid.awe-c-right::before {
+  content: '\f0da';
 }
 
 .awe-solid.awe-decrease::before {

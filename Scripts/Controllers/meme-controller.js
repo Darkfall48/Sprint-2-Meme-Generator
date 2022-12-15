@@ -5,11 +5,14 @@ let gCtx
 
 let gPos
 
+let isRendered
+
 // let gOffPos = {}
 
 let gIsMoving
 
 function onInitMeme() {
+  isRendered = false
   // initMeme()
   gCanvas = document.querySelector('.meme-canvas')
   gCtx = gCanvas.getContext('2d')
@@ -31,6 +34,7 @@ function drawImgFromRemote(image) {
   img.src = image.url
   // img.crossOrigin = 'anonymous'
   img.onload = () => {
+    isRendered = true
     clearCanvas()
     gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height)
     drawTxt()
@@ -38,6 +42,7 @@ function drawImgFromRemote(image) {
 }
 
 function drawTxt() {
+  if (!isRendered) return
   const meme = getMeme()
 
   //? DONE: Add Multiple Lines
@@ -45,7 +50,7 @@ function drawTxt() {
   lines.forEach((line) => {
     const { txt, size, color, strokeColor, align, pos } = line
     const { x, y } = pos
-    console.log(line)
+    // console.log(line)
 
     gCtx.lineWidth = 2
     gCtx.strokeStyle = strokeColor
@@ -59,6 +64,7 @@ function drawTxt() {
 }
 
 function clearCanvas() {
+  if (!isRendered) return
   gCtx.clearRect(0, 0, gCanvas.width, gCanvas.height)
   console.log('Canvas is cleaned')
   // console.clear()
@@ -78,16 +84,19 @@ function addEventListeners() {
   // })
 
   gCanvas.addEventListener('mousedown', (e) => {
+    if (!isRendered) return
     gIsMoving = true
     document.body.style.cursor = 'grabbing'
   })
 
   gCanvas.addEventListener('mouseup', (e) => {
+    if (!isRendered) return
     gIsMoving = false
     document.body.style.cursor = 'auto'
   })
 
   gCanvas.addEventListener('mousemove', (e) => {
+    if (!isRendered) return
     if (!gIsMoving) return
     const meme = getMeme()
     const { offsetX, offsetY } = e
@@ -130,18 +139,21 @@ function resizeCanvas() {
 }
 
 function setTextColor(value) {
+  if (!isRendered) return
   const meme = getMeme()
   meme.lines[meme.selectedLineIdx].color = value
   renderMeme()
 }
 
 function setTextStrokeColor(value) {
+  if (!isRendered) return
   const meme = getMeme()
   meme.lines[meme.selectedLineIdx].strokeColor = value
   renderMeme()
 }
 
 function setAlignment(value) {
+  if (!isRendered) return
   const meme = getMeme()
   meme.lines[meme.selectedLineIdx].align = value
   switch (value) {
@@ -160,35 +172,41 @@ function setAlignment(value) {
 }
 
 function moveVertical(value) {
+  if (!isRendered) return
   const meme = getMeme()
   meme.lines[meme.selectedLineIdx].pos.y += value
   renderMeme()
 }
 
 function moveHorizontal(value) {
+  if (!isRendered) return
   const meme = getMeme()
   meme.lines[meme.selectedLineIdx].pos.x += value
   renderMeme()
 }
 
 function changeSize(value) {
+  if (!isRendered) return
   const meme = getMeme()
   meme.lines[meme.selectedLineIdx].size += value
   renderMeme()
 }
 
 function onAddLine() {
+  if (!isRendered) return
   createLine()
   renderMeme()
 }
 
 function onDeleteLine() {
+  if (!isRendered) return
   deleteLine()
   renderMeme()
 }
 
-// ! Not working, Github Cross Origin not allowed
+//? Resolved: ! Not working, Github Cross Origin not allowed
 function downloadMeme(elLink) {
+  if (!isRendered) return
   const data = gCanvas.toDataURL()
   elLink.href = data
   console.log(data)

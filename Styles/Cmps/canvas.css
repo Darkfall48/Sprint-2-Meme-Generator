@@ -1,1 +1,199 @@
+/** Canvas **/
+.meme-section {
+  padding: 30px;
+  margin-bottom: 16px;
+  display: flex;
+  place-content: center;
+  gap: 90px;
+}
 
+/** Meme **/
+.canvas-container {
+  flex-basis: 50%;
+  /* box-shadow: 1px 5px 0 rgba(13, 14, 16, 0.65),
+    inset 0 5px 0 rgba(255, 255, 255, 0.25); */
+  /* border-radius: 25px; */
+  /* background-color: #ffffff; */
+  display: flex;
+}
+
+.meme-canvas {
+  border: 6px solid rgba(235, 238, 243, 0.09);
+
+  place-self: center;
+  border-radius: 25px;
+}
+
+/** Editor **/
+.editor-container {
+  flex-basis: 50%;
+  display: flex;
+  border-radius: 30px;
+  background-color: rgba(236, 239, 244, 0.11);
+}
+
+.editor-nav {
+  padding: 40px;
+}
+
+.editor-nav button {
+  font-size: 1.5em;
+  box-shadow: 1px 5px 0 rgba(92, 92, 92, 0.55),
+    inset 0 5px 0 rgba(255, 255, 255, 0.58);
+  height: 2.5rem;
+  width: 2.5rem;
+  border: none;
+  border-radius: 10px;
+  transition: font-size 0.1s;
+}
+.editor-nav button:active {
+  font-size: 1em;
+}
+
+/** Text Input Container **/
+.text-input-container {
+  height: 37px;
+  /* width: 445px; */
+  border-radius: 28px;
+  box-shadow: 1px 5px 0 #bbc4d1, inset 0 5px 0 #ffffff;
+  background-color: #ebeef3;
+  display: flex;
+  place-items: center;
+  margin-bottom: 36px;
+}
+
+#text-input-editor {
+  text-align: center;
+  font-size: 1.5625em;
+  font-family: poppins-medium;
+  text-transform: uppercase;
+  color: #3d3d3d;
+}
+
+/** Lines Input Container **/
+.lines-input-container {
+  margin-bottom: 27px;
+}
+
+/** Movement Input Container **/
+.movement-input-container {
+  margin-bottom: 27px;
+  background-color: #6eb47d;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, fit-content);
+  grid-template-rows: repeat(3, fit-content);
+  /* margin-left: auto; */
+  place-content: center;
+  place-items: center;
+  height: fit-content;
+  width: fit-content;
+}
+
+.movement-input-container .move-up {
+  grid-column: 2;
+  grid-row: 1;
+}
+.movement-input-container .move-right {
+  grid-column: 3;
+  grid-row: 2;
+}
+.movement-input-container .move-down {
+  grid-column: 2;
+  grid-row: 3;
+}
+.movement-input-container .move-left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/** Text Control Container **/
+.text-control-container {
+  background-color: #19a59f;
+  border-radius: 15px;
+  margin-bottom: 22px;
+  place-content: center;
+  place-items: center;
+  height: fit-content;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 16px;
+  gap: 10px;
+}
+
+.text-control-container .increase-button {
+  grid-column: 1;
+  grid-row: 1;
+}
+.text-control-container .decrease-button {
+  grid-column: 5;
+  grid-row: 1;
+}
+.text-control-container .align-left-button {
+  grid-column: 2;
+  grid-row: 1;
+}
+.text-control-container .align-center-button {
+  grid-column: 3;
+  grid-row: 1;
+}
+.text-control-container .align-right-button {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.text-control-container .stroke-color-input {
+  width: max-content;
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+.text-control-container .text-color-input {
+  width: max-content;
+  grid-column: 4 / span 2;
+  grid-row: 2;
+}
+
+/** Sticker Container **/
+.sticker-container {
+  border-radius: 45px;
+  background-color: #ffffff;
+  color: black;
+  display: flex;
+  margin-bottom: 25px;
+  align-content: center;
+  justify-content: space-around;
+}
+
+/** Save Container **/
+.save-container {
+  display: flex;
+  place-items: center;
+  justify-content: space-between;
+}
+
+.save-container button {
+  width: max-content;
+  height: max-content;
+  font-size: 1.3125em;
+  color: white;
+  padding: 8px;
+}
+
+.save-container .save-button {
+  background-color: #8f44bb;
+  box-shadow: 1px 6px 0 #632687, inset 0 5px 0 #b28bd4;
+  border-radius: 15px;
+}
+.save-container .publish-button {
+  background-color: #bb44a1;
+  box-shadow: 1px 6px 0 #87267f, inset 0 5px 0 #d48bc9;
+  border-radius: 15px;
+}
+
+.save-container .share-button {
+  background-color: #1e7cd3;
+  box-shadow: 1px 6px 0 #165c9c, inset 0 5px 0 #7cb0e2;
+  border-radius: 15px;
+}

@@ -21,7 +21,11 @@
           <li><button href="#">Memes</button></li>
           <li><button href="#">About</button></li>
           <li class="dropdown-langs">
-            <select name="dropdown-langs-content" id="dropdown-langs-content">
+            <select
+              name="dropdown-langs-content"
+              id="dropdown-langs-content"
+              title="Select Language"
+            >
               <option value="en">English</option>
               <option value="fr">French</option>
               <option value="he">Hebrew</option>
@@ -39,6 +43,7 @@
             <li class="search-bar">
               <div class="search-bar-container">
                 <input
+                  class="clean-input"
                   type="text"
                   name="search-bar-value"
                   id="search-bar-value"
@@ -57,122 +62,123 @@
           <canvas class="meme-canvas" height="450" width="450">Canvas</canvas>
         </article>
 
-        <aside class="editor-nav-container">
+        <aside class="editor-container">
           <nav class="editor-nav">
-            <ul class="editor-nav-list">
-              <li>
-                <input
-                  type="text"
-                  name="text-input-editor"
-                  id="text-input-editor"
-                  placeholder="Insert Text"
-                  onkeyup="setLineTxt(value)"
-                />
-              </li>
-              <ul class="editor-input-list">
-                <li>
-                  <button
-                    onclick="onAddLine()"
-                    class="awe-solid awe-add"
-                    title="Add Line"
-                  >
-                    Add Line
-                  </button>
-                  <button
-                    class="awe-solid awe-up"
-                    onclick="moveVertical(-10)"
-                    title="Move Up"
-                  ></button>
-                  <button
-                    class="awe-solid awe-down"
-                    onclick="moveVertical(10)"
-                    title="Move Down"
-                  ></button>
-                  <button
-                    class="awe-solid awe-left"
-                    onclick="moveHorizontal(-10)"
-                    title="Move Left"
-                  ></button>
-                  <button
-                    class="awe-solid awe-right"
-                    onclick="moveHorizontal(10)"
-                    title="Move Right"
-                  ></button>
-                  <button
-                    class="awe-solid awe-switch"
-                    title="Switch Line"
-                    onclick="switchLine()"
-                  >
-                    Switch Line
-                  </button>
-                  <button
-                    onclick="onDeleteLine()"
-                    class="awe-solid awe-delete"
-                    title="Remove Line"
-                  >
-                    Remove
-                  </button>
-                </li>
-              </ul>
-              <ul class="editor-text-control-list">
-                <li>
-                  <button
-                    class="awe-solid awe-increase"
-                    onclick="changeSize(5)"
-                    title="Increase Text Size"
-                  ></button>
-                  <button
-                    class="awe-solid awe-decrease"
-                    onclick="changeSize(-5)"
-                    title="Decrease Text Size"
-                  ></button>
-                  <button class="awe-solid awe-pallette" title="Set Text Color">
-                    <input type="color" onchange="setTextColor(value)" />
-                  </button>
-                  <button
-                    class="awe-solid awe-pallette"
-                    title="Set Text Stroke Color"
-                  >
-                    <input type="color" onchange="setTextStrokeColor(value)" />
-                  </button>
-                  <button
-                    class="awe-solid awe-align-left"
-                    onclick="setAlignment('left')"
-                  >
-                    Align Left
-                  </button>
-                  <button
-                    class="awe-solid awe-align-center"
-                    onclick="setAlignment('center')"
-                  >
-                    Align Center
-                  </button>
-                  <button
-                    class="awe-solid awe-align-right"
-                    onclick="setAlignment('right')"
-                  >
-                    Align Right
-                  </button>
-                </li>
-              </ul>
-              <ul class="editor-sticker-list">
-                <li>
-                  <button>Left</button>
-                  <div>Stickers Container</div>
-                  <button>Right</button>
-                </li>
-              </ul>
-              <ul class="editor-save-list">
-                <li>
-                  <a href="#" onclick="downloadMeme(this)" download="My Picasso"
-                    >Download</a
-                  >
-                  <button class="awe-solid awe-save">Save</button>
-                  <button class="awe-solid awe-publish">Upload</button>
-                  <button class="awe-solid awe-share">Share</button>
-                </li>
-              </ul>
-            </ul>
+            <div class="text-input-container">
+              <input
+                class="clean-input"
+                type="text"
+                name="text-input-editor"
+                id="text-input-editor"
+                placeholder="Insert Text"
+                onkeyup="setLineTxt(value)"
+              />
+            </div>
+            <div class="lines-input-container">
+              <button
+                onclick="onAddLine()"
+                class="awe-solid awe-add"
+                title="Add Line"
+              ></button>
+              <button
+                class="awe-solid awe-switch"
+                title="Switch Line"
+                onclick="switchLine()"
+              ></button>
+              <button
+                onclick="onDeleteLine()"
+                class="awe-solid awe-delete"
+                title="Remove Line"
+              ></button>
+            </div>
+            <div class="movement-input-container">
+              <button
+                class="awe-solid awe-up move-up"
+                onclick="moveVertical(-10)"
+                title="Move Up"
+              ></button>
+              <button
+                class="awe-solid awe-down move-down"
+                onclick="moveVertical(10)"
+                title="Move Down"
+              ></button>
+              <button
+                class="awe-solid awe-left move-left"
+                onclick="moveHorizontal(-10)"
+                title="Move Left"
+              ></button>
+              <button
+                class="awe-solid awe-right move-right"
+                onclick="moveHorizontal(10)"
+                title="Move Right"
+              ></button>
+            </div>
+            <div class="text-control-container">
+              <button
+                class="awe-solid awe-increase increase-button"
+                onclick="changeSize(5)"
+                title="Increase Text Size"
+              ></button>
+              <button
+                class="awe-solid awe-decrease decrease-button"
+                onclick="changeSize(-5)"
+                title="Decrease Text Size"
+              ></button>
+              <button
+                class="awe-solid awe-t text-color-input"
+                title="Set Text Color"
+              >
+                <input type="color" onchange="setTextColor(value)" />
+              </button>
+              <button
+                class="awe-solid awe-s stroke-color-input"
+                title="Set Text Stroke Color"
+              >
+                <input type="color" onchange="setTextStrokeColor(value)" />
+              </button>
+              <button
+                class="awe-solid awe-align-left align-left-button"
+                onclick="setAlignment('left')"
+                title="Align text to the left"
+              ></button>
+              <button
+                class="awe-solid awe-align-center align-center-button"
+                onclick="setAlignment('center')"
+                title="Align text to the center"
+              ></button>
+              <button
+                class="awe-solid awe-align-right align-right-button"
+                onclick="setAlignment('right')"
+                title="Align text to the right"
+              ></button>
+            </div>
+            <div class="sticker-container">
+              <a class="awe-solid awe-c-left"></a>
+              <div>Stickers Container</div>
+              <a class="awe-solid awe-c-right"></a>
+            </div>
+            <div class="save-container">
+              <a href="#" onclick="downloadMeme(this)" download="My Picasso">
+                <button
+                  class="awe-solid awe-save save-button"
+                  title="Save your Masterpiece to local"
+                >
+                  Save
+                </button>
+              </a>
+              <button
+                class="awe-solid awe-publish publish-button"
+                title="Upload your Masterpiece to the website"
+              >
+                Upload
+              </button>
+              <button
+                class="awe-solid awe-share share-button"
+                title="Share to your friends"
+              >
+                Share
+              </button>
+            </div>
           </nav>
         </aside>
       </section>
