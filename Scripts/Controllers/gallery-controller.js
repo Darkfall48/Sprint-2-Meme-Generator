@@ -25,3 +25,10 @@ function renderGallery() {
 function onImageClicked(imageId) {
   imageClicked(imageId)
 }
+
+function onShowGallery() {
+  const elEditor = document.querySelector('.meme-section')
+  const elGallery = document.querySelector('.gallery-section')
+  elEditor.classList.add('hide')
+  elGallery.classList.remove('hide')
+}

@@ -12,6 +12,7 @@ let isRendered
 let gIsMoving
 
 function onInitMeme() {
+  onDisplayEditor()
   isRendered = false
   // initMeme()
   gCanvas = document.querySelector('.meme-canvas')
@@ -20,6 +21,13 @@ function onInitMeme() {
   addEventListeners()
 
   renderMeme()
+}
+
+function onDisplayEditor() {
+  const elEditor = document.querySelector('.meme-section')
+  const elGallery = document.querySelector('.gallery-section')
+  elEditor.classList.remove('hide')
+  elGallery.classList.add('hide')
 }
 
 //? DONE: renders an image on the canvas and a line of text on top
