@@ -67,7 +67,9 @@
               <a>Seb</a>
               <a>Ban</a>
             </li>
-            <li><button class="keyword-button">More</button></li>
+            <li class="keyword-list">
+              <button class="keyword-button">More</button>
+            </li>
           </ul>
         </nav>
         <article class="gallery-container"></article>
@@ -90,44 +92,46 @@
                 onkeyup="setLineTxt(value)"
               />
             </div>
-            <div class="lines-input-container">
-              <button
-                onclick="onAddLine()"
-                class="awe-solid awe-add add-button"
-                title="Add Line"
-              ></button>
-              <button
-                class="awe-solid awe-switch switch-button"
-                title="Switch Line"
-                onclick="switchLine()"
-              ></button>
-              <button
-                onclick="onDeleteLine()"
-                class="awe-solid awe-delete delete-button"
-                title="Remove Line"
-              ></button>
-            </div>
-            <div class="movement-input-container">
-              <button
-                class="awe-solid awe-up move-up"
-                onclick="moveVertical(-10)"
-                title="Move Up"
-              ></button>
-              <button
-                class="awe-solid awe-down move-down"
-                onclick="moveVertical(10)"
-                title="Move Down"
-              ></button>
-              <button
-                class="awe-solid awe-left move-left"
-                onclick="moveHorizontal(-10)"
-                title="Move Left"
-              ></button>
-              <button
-                class="awe-solid awe-right move-right"
-                onclick="moveHorizontal(10)"
-                title="Move Right"
-              ></button>
+            <div class="lines-movement-container">
+              <div class="lines-input-container">
+                <button
+                  onclick="onAddLine()"
+                  class="awe-solid awe-add add-button"
+                  title="Add Line"
+                ></button>
+                <button
+                  class="awe-solid awe-switch switch-button"
+                  title="Switch Line"
+                  onclick="switchLine()"
+                ></button>
+                <button
+                  onclick="onDeleteLine()"
+                  class="awe-solid awe-delete delete-button"
+                  title="Remove Line"
+                ></button>
+              </div>
+              <div class="movement-input-container">
+                <button
+                  class="awe-solid awe-up move-up"
+                  onclick="moveVertical(-10)"
+                  title="Move Up"
+                ></button>
+                <button
+                  class="awe-solid awe-down move-down"
+                  onclick="moveVertical(10)"
+                  title="Move Down"
+                ></button>
+                <button
+                  class="awe-solid awe-left move-left"
+                  onclick="moveHorizontal(-10)"
+                  title="Move Left"
+                ></button>
+                <button
+                  class="awe-solid awe-right move-right"
+                  onclick="moveHorizontal(10)"
+                  title="Move Right"
+                ></button>
+              </div>
             </div>
             <div class="text-control-container">
               <button

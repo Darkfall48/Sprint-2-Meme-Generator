@@ -12,12 +12,16 @@
 
 .gallery-nav-list {
   display: grid;
-  grid-template-columns: 1fr 4fr 4fr 1fr;
-  grid-template-rows: 1fr;
+  /* grid-template-columns: 1fr 4fr 4fr 1fr;
+  grid-template-rows: 1fr; */
   /* grid-template-areas: 'a b c'; */
   /* place-content: center; */
   gap: 15px;
   place-items: center;
+}
+
+.gallery-nav-list h1 {
+  text-align: center;
 }
 
 .gallery-nav-list .camera-icon {
@@ -107,4 +111,95 @@
   width: 108%;
   box-shadow: -1px 1px 2px 1px #272121;
   cursor: pointer;
+}
+
+@media (max-width: 780px) {
+  .gallery-nav-list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .gallery-nav-list .keyword-container {
+    /* grid-area: key !important; */
+    grid-column: span 2;
+    grid-row: 1;
+  }
+
+  .gallery-nav-list .search-bar {
+    /* grid-area: search !important; */
+    grid-column: span 2;
+    grid-row: 2;
+  }
+  .gallery-nav-list .import-picture {
+    /* grid-area: camera !important; */
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .gallery-nav-list .keyword-list {
+    /* grid-area: button !important; */
+    grid-column: 2;
+    grid-row: 3;
+  }
+}
+
+@media (min-width: 780px) {
+  .gallery-nav-list {
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: stretch;
+  }
+
+  .gallery-nav-list .keyword-container {
+    /* grid-area: key !important; */
+    grid-column: span 3;
+    grid-row: 2;
+  }
+
+  .gallery-nav-list .search-bar {
+    /* grid-area: search !important; */
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .gallery-nav-list .import-picture {
+    /* grid-area: camera !important; */
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .gallery-nav-list .keyword-list {
+    /* grid-area: button !important; */
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
+
+@media (min-width: 1060px) {
+  .gallery-nav-list {
+    grid-template-columns: 1fr 4fr 4fr 1fr;
+    grid-template-rows: 1fr;
+    /* grid-template-areas: 'camera search key button'; */
+    /* place-content: center; */
+    gap: 15px;
+    /* place-items: center; */
+  }
+
+  .gallery-nav-list .import-picture {
+    /* grid-area: camera !important; */
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .gallery-nav-list .search-bar {
+    /* grid-area: search !important; */
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .gallery-nav-list .keyword-container {
+    /* grid-area: key !important; */
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .gallery-nav-list .keyword-list {
+    /* grid-area: button !important; */
+    grid-column: 4;
+    grid-row: 1;
+  }
 }

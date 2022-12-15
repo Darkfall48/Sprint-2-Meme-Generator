@@ -99,3 +99,12 @@
 #dropdown-langs-content::after {
   content: '\f107';
 }
+
+@media (max-width: 780px) {
+}
+
+@media (min-width: 780px) {
+}
+
+@media (min-width: 1060px) {
+}
