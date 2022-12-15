@@ -25,66 +25,57 @@ function _createImages() {
   gImgs = loadFromStorage(GALLERY_STORAGE_KEY)
   if (!gImgs || !gImgs.length) {
     gImgs = [
-      _createImage(
-        'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/1.jpg?raw=true',
-        ['funny', 'cat']
-      ),
-      _createImage(
-        'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/2.jpg?raw=true',
-        ['funny', 'cat']
-      ),
-      _createImage(
-        'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/3.jpg?raw=true',
-        ['funny', 'cat']
-      ),
-      _createImage(
-        'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/4.jpg?raw=true',
-        ['funny', 'cat']
-      ),
-      _createImage(
-        'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/5.jpg?raw=true',
-        ['funny', 'cat']
-      ),
-      _createImage(
-        'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/6.jpg?raw=true',
-        ['funny', 'cat']
-      ),
-      _createImage(
-        'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/7.jpg?raw=true',
-        ['funny', 'cat']
-      ),
-      _createImage(
-        'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/8.jpg?raw=true',
-        ['funny', 'cat']
-      ),
-      _createImage(
-        'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/9.jpg?raw=true',
-        ['funny', 'cat']
-      ),
-      _createImage(
-        'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/10.jpg?raw=true',
-        ['funny', 'cat']
-      ),
-      _createImage(
-        'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/11.jpg?raw=true',
-        ['funny', 'cat']
-      ),
-      _createImage(
-        'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/12.jpg?raw=true',
-        ['funny', 'cat']
-      ),
-      _createImage(
-        'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/13.jpg?raw=true',
-        ['funny', 'cat']
-      ),
-      _createImage(
-        'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/14.jpg?raw=true',
-        ['funny', 'cat']
-      ),
-      _createImage(
-        'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/15.jpg?raw=true',
-        ['funny', 'cat']
-      ),
+      _createImage('./Images/Gallery/1.jpg', ['funny', 'cat']),
+      _createImage('./Images/Gallery/2.jpg', ['funny', 'cat']),
+      _createImage('./Images/Gallery/3.jpg', ['funny', 'cat']),
+      // _createImage(
+      //   'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/4.jpg?raw=true',
+      //   ['funny', 'cat']
+      // ),
+      // _createImage(
+      //   'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/5.jpg?raw=true',
+      //   ['funny', 'cat']
+      // ),
+      // _createImage(
+      //   'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/6.jpg?raw=true',
+      //   ['funny', 'cat']
+      // ),
+      // _createImage(
+      //   'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/7.jpg?raw=true',
+      //   ['funny', 'cat']
+      // ),
+      // _createImage(
+      //   'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/8.jpg?raw=true',
+      //   ['funny', 'cat']
+      // ),
+      // _createImage(
+      //   'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/9.jpg?raw=true',
+      //   ['funny', 'cat']
+      // ),
+      // _createImage(
+      //   'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/10.jpg?raw=true',
+      //   ['funny', 'cat']
+      // ),
+      // _createImage(
+      //   'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/11.jpg?raw=true',
+      //   ['funny', 'cat']
+      // ),
+      // _createImage(
+      //   'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/12.jpg?raw=true',
+      //   ['funny', 'cat']
+      // ),
+      // _createImage(
+      //   'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/13.jpg?raw=true',
+      //   ['funny', 'cat']
+      // ),
+      // _createImage(
+      //   'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/14.jpg?raw=true',
+      //   ['funny', 'cat']
+      // ),
+      // _createImage(
+      //   'https://github.com/Darkfall48/Sprint-2-Meme-Generator/blob/main/Images/Gallery/15.jpg?raw=true',
+      //   ['funny', 'cat']
+      // ),
     ]
     console.log('Gallery Created')
   }
