@@ -4,12 +4,13 @@
   margin-bottom: 16px;
   display: flex;
   place-content: center;
-  gap: 90px;
+  justify-content: space-evenly;
+  gap: 10px;
 }
 
 /** Meme **/
 .canvas-container {
-  flex-basis: 50%;
+  flex-basis: 30%;
   /* box-shadow: 1px 5px 0 rgba(13, 14, 16, 0.65),
     inset 0 5px 0 rgba(255, 255, 255, 0.25); */
   /* border-radius: 25px; */
@@ -26,7 +27,7 @@
 
 /** Editor **/
 .editor-container {
-  flex-basis: 50%;
+  flex-basis: 30%;
   display: flex;
   border-radius: 30px;
   background-color: rgba(236, 239, 244, 0.11);
@@ -48,7 +49,7 @@
 }
 .editor-nav button:active {
   font-size: 1em;
-  color: red;
+  color: darkgray;
 }
 
 /** Text Input Container **/
@@ -74,6 +75,36 @@
 /** Lines Input Container **/
 .lines-input-container {
   margin-bottom: 27px;
+}
+
+.add-button {
+  color: white;
+  text-shadow: 1px 3px 0 rgba(1, 93, 51, 0.61);
+  box-shadow: 1px 5px 0 #015d33, inset 0 5px 0 rgba(255, 255, 255, 0.58) !important;
+  background-image: linear-gradient(-38deg, #8dcf7e 0%, #3f714c 100%);
+}
+.switch-button {
+  color: white;
+  text-shadow: 1px 3px 0 rgba(1, 93, 51, 0.61);
+  box-shadow: 1px 5px 0 #036e78, inset 0 5px 0 rgba(255, 255, 255, 0.58) !important;
+
+  background-image: linear-gradient(
+    -38deg,
+    #66c4dc 0%,
+    #40b1ce 50%,
+    #0c98bb 100%
+  );
+}
+.delete-button {
+  color: white;
+  text-shadow: 1px 3px 0 rgba(1, 93, 51, 0.61);
+  box-shadow: 1px 5px 0 #8c0606, inset 0 5px 0 rgba(255, 255, 255, 0.58) !important;
+  background-image: linear-gradient(
+    -38deg,
+    #cf1d37 0%,
+    #cf1d37 1%,
+    #f05036 100%
+  );
 }
 
 /** Movement Input Container **/

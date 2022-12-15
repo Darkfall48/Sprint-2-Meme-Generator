@@ -13,6 +13,7 @@
         <img
           src="./Images/Site Design/Logo/logo.png"
           alt="Meme Generator Logo"
+          onclick="onShowGallery()"
         />
       </div>
       <nav class="main-nav">
@@ -39,10 +40,19 @@
       <section class="gallery-section">
         <nav class="gallery-nav">
           <ul class="gallery-nav-list clean-list">
-            <li class="import-picture"><input type="file" /></li>
+            <li class="import-picture">
+              <label for="import-picture-input">
+                <h1 class="awe-solid awe-camera camera-icon"></h1>
+                <input
+                  id="import-picture-input"
+                  type="file"
+                  accept="image/png, image/jpg, image/jpeg"
+              /></label>
+            </li>
             <li class="search-bar">
               <div class="search-bar-container">
                 <input
+                  onkeyup="setFilter(value)"
                   class="clean-input"
                   type="text"
                   name="search-bar-value"
@@ -51,10 +61,13 @@
                 /><a class="search-icon awe-solid awe-search"></a>
               </div>
             </li>
-            <li class="keyword-block">
-              <div class="keyword-container"></div>
-              <button class="keyword-button">More</button>
+            <li class="keyword-container">
+              <a>Sid</a>
+              <a>Ney</a>
+              <a>Seb</a>
+              <a>Ban</a>
             </li>
+            <li><button class="keyword-button">More</button></li>
           </ul>
         </nav>
         <article class="gallery-container"></article>
@@ -80,17 +93,17 @@
             <div class="lines-input-container">
               <button
                 onclick="onAddLine()"
-                class="awe-solid awe-add"
+                class="awe-solid awe-add add-button"
                 title="Add Line"
               ></button>
               <button
-                class="awe-solid awe-switch"
+                class="awe-solid awe-switch switch-button"
                 title="Switch Line"
                 onclick="switchLine()"
               ></button>
               <button
                 onclick="onDeleteLine()"
-                class="awe-solid awe-delete"
+                class="awe-solid awe-delete delete-button"
                 title="Remove Line"
               ></button>
             </div>

@@ -80,6 +80,10 @@
   content: '\f002';
 }
 
+.awe-solid.awe-camera::before {
+  content: '\f083';
+}
+
 /* regular */
 @font-face {
   font-family: awe-regular;

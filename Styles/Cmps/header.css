@@ -14,8 +14,17 @@
 }
 
 .main-header .logo {
+  cursor: pointer;
   grid-area: logo;
   /* width: 100%; */
+}
+
+.main-header .logo img {
+  transition: width 0.3s;
+}
+
+.main-header .logo img:active {
+  width: 8em;
 }
 
 .main-header .main-nav {
