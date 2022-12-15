@@ -261,7 +261,13 @@
 }
 
 @media (min-width: 780px) {
+  .meme-section {
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 1060px) {
+  .meme-section {
+    flex-direction: row;
+  }
 }

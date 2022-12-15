@@ -6,6 +6,7 @@ let gCtx
 let gPos
 
 let isRendered
+let isSized
 
 // let gOffPos = {}
 
@@ -14,6 +15,7 @@ let gIsMoving
 function onInitMeme() {
   onDisplayEditor()
   isRendered = false
+  isSized = false
   // initMeme()
   gCanvas = document.querySelector('.meme-canvas')
   gCtx = gCanvas.getContext('2d')
@@ -32,6 +34,11 @@ function onDisplayEditor() {
 
 //? DONE: renders an image on the canvas and a line of text on top
 function renderMeme() {
+  if (!isSized) {
+    //? DONE: Reset Canvas Size
+    gCanvas.height = 450
+    gCanvas.width = 450
+  }
   const meme = getMeme()
   const image = getImageById(meme.selectedImgId)
   drawImgFromRemote(image)
@@ -41,6 +48,15 @@ function drawImgFromRemote(image) {
   const img = new Image()
   img.src = image.url
   // img.crossOrigin = 'anonymous'
+  if (!isSized) {
+    //? DONE: Set New canvas size based on ratio picture
+    const { height, width } = img
+    // console.log('Image: Height', height, 'Width', width)
+    // console.log('Canvas: Height', gCanvas.height, 'Width', gCanvas.width)
+    gCanvas.height = (gCanvas.height * height) / width
+    // console.log('New Canvas: Height', gCanvas.height, 'Width', gCanvas.width)
+    isSized = true
+  }
   img.onload = () => {
     isRendered = true
     clearCanvas()

@@ -57,6 +57,10 @@ function _createImages() {
       _createImage('./Images/Gallery/16.jpg', ['movie', 'star', 'space']),
       _createImage('./Images/Gallery/17.jpg', ['politic', 'vladimir', 'putin']),
       _createImage('./Images/Gallery/18.jpg', ['movie', 'toys']),
+      _createImage('./Images/Various/2.jpg', ['movie', 'toys']),
+      _createImage('./Images/Various/004.jpg', ['movie', 'toys']),
+      _createImage('./Images/Various/drevil.jpg', ['movie', 'toys']),
+      _createImage('./Images/Various/leo.jpg', ['movie', 'toys']),
     ]
     console.log('Gallery Created')
   }
