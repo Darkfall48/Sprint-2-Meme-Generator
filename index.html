@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./Images/Site Design/Icon/meme.ico" />
     <link rel="stylesheet" href="./Styles/imports.css" />
     <title>Meme Generator - By Sidney Sebban</title>
   </head>
@@ -18,18 +19,27 @@
       </div>
       <nav class="main-nav">
         <ul class="main-nav-list clean-list clean-link">
-          <li><button onclick="onShowGallery()" href="#">Gallery</button></li>
-          <li><button href="#">Memes</button></li>
-          <li><button href="#">About</button></li>
+          <li>
+            <button
+              data-trans="main-nav-gallery"
+              onclick="onShowGallery()"
+              href="#"
+            >
+              Gallery
+            </button>
+          </li>
+          <li><button data-trans="main-nav-memes" href="#">Memes</button></li>
+          <li><button data-trans="main-nav-about" href="#">About</button></li>
           <li class="dropdown-langs">
             <select
               name="dropdown-langs-content"
               id="dropdown-langs-content"
               title="Select Language"
+              onchange="onTranslation(value)"
             >
-              <option value="en">English</option>
-              <option value="fr">French</option>
-              <option value="he">Hebrew</option>
+              <option data-trans="lang-en" value="en">English</option>
+              <option data-trans="lang-fr" value="fr">French</option>
+              <option data-trans="lang-he" value="he">Hebrew</option>
             </select>
           </li>
         </ul>
@@ -47,6 +57,7 @@
                   id="import-picture-input"
                   type="file"
                   accept="image/png, image/jpg, image/jpeg"
+                  onchange="onUploadImg(this.value)"
               /></label>
             </li>
             <li class="search-bar">
@@ -62,10 +73,10 @@
               </div>
             </li>
             <li class="keyword-container">
-              <a>Sid</a>
-              <a>Ney</a>
-              <a>Seb</a>
-              <a>Ban</a>
+              <a onclick="setFilter('funny')">funny</a>
+              <a onclick="setFilter('cat')">cat</a>
+              <a onclick="setFilter('movie')">movie</a>
+              <a onclick="setFilter('actor')">actor</a>
             </li>
             <li class="keyword-list">
               <button class="keyword-button">More</button>
@@ -214,9 +225,11 @@
     <!--* Services *-->
     <script src="./Scripts/Services/utils-service.js"></script>
     <script src="./Scripts/Services/storage-service.js"></script>
+    <script src="./Scripts/Services/i18n-service.js"></script>
     <script src="./Scripts/Services/meme-service.js"></script>
     <script src="./Scripts/Services/gallery-service.js"></script>
     <!--* Controllers *-->
+    <script src="./Scripts/Controllers/menu-controller.js"></script>
     <script src="./Scripts/Controllers/meme-controller.js"></script>
     <script src="./Scripts/Controllers/gallery-controller.js"></script>
   </body>
