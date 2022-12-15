@@ -4,7 +4,8 @@
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
   grid-template-areas: 'logo nav';
-  margin-top: 11px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   width: 80vw;
   height: 75px;
   border-radius: 37px;
@@ -14,10 +15,76 @@
 
 .main-header .logo {
   grid-area: logo;
+  /* width: 100%; */
+}
+
+.main-header .main-nav {
+  width: 100%;
+  grid-area: nav;
 }
 
 .main-header .main-nav .main-nav-list {
-  grid-area: nav;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
   flex-direction: row;
+}
+
+.main-header .main-nav .main-nav-list > li {
+  flex-basis: 25%;
+}
+
+.main-nav-list li > button {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 1.325em;
+  width: 7.25em;
+  height: 2.5em;
+  font-weight: 500;
+  font-family: poppins-regular;
+}
+.main-nav-list li button:hover {
+  background-color: #fefefe;
+  color: #21ac91;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.15);
+}
+
+#dropdown-langs-content {
+  margin: auto;
+  /* padding: auto; */
+  /* text-align: center; */
+  color: #ffffff;
+  font-size: 1.325em;
+
+  display: block;
+  border: none;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 10px;
+  outline: none;
+  box-shadow: none;
+}
+#dropdown-langs-content > option {
+  margin: auto;
+  /* padding: auto; */
+  /* text-align: center; */
+  color: black;
+  font-size: 1em;
+
+  display: block;
+  border: none;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 10px;
+}
+
+#dropdown-langs-content::after {
+  content: '\f107';
 }

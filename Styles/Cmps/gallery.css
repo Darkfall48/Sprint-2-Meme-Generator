@@ -82,4 +82,5 @@
 .image:hover {
   width: 108%;
   box-shadow: -1px 1px 2px 1px #272121;
+  cursor: pointer;
 }
