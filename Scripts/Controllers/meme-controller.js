@@ -211,3 +211,30 @@ function downloadMeme(elLink) {
   elLink.href = data
   console.log(data)
 }
+
+//? DONE: Use the new Web Share API to share your meme
+async function shareMeme() {
+  if (!isRendered) return
+
+  const data = gCanvas.toDataURL()
+  const blob = await (await fetch(data)).blob()
+  const filesArray = [
+    new File([blob], 'My Picasso.png', {
+      title: 'My Picasso',
+      copyright: 'Sidney Sebban',
+      url: 'https://github.com/Darkfall48/Sprint-2-Meme-Generator',
+      type: blob.type,
+      lastModified: new Date().getTime(),
+    }),
+  ]
+  const shareData = {
+    files: filesArray,
+  }
+
+  try {
+    await navigator.share(shareData)
+    console.warn('MDN shared successfully')
+  } catch (err) {
+    console.error(`Error: ${err}`)
+  }
+}
