@@ -1,5 +1,5 @@
 .main-layout > *:not(.full) {
-  /* max-width: 980px; */
+  /* max-width: 1200px; */
   max-width: var(--l);
   margin-left: auto;
   margin-right: auto;
@@ -11,4 +11,11 @@
   max-width: var(--l);
   margin-left: auto;
   margin-right: auto;
+}
+
+.main-layout-footer {
+  max-width: var(--l);
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
 }

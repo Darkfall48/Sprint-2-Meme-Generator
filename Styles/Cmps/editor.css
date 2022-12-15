@@ -48,6 +48,7 @@
 }
 .editor-nav button:active {
   font-size: 1em;
+  color: red;
 }
 
 /** Text Input Container **/
@@ -179,6 +180,10 @@
   font-size: 1.3125em;
   color: white;
   padding: 8px;
+}
+
+.save-container button:active {
+  color: white;
 }
 
 .save-container .save-button {

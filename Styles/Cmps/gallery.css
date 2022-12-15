@@ -29,6 +29,13 @@
   grid-area: b; */
 }
 
+/* .gallery-nav-list .keyword-block {
+  border-radius: 25px;
+  background-color: #fefefe;
+  box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.15);
+  display: flex;
+} */
+
 .keyword-button {
   /* display: block;
   grid-area: c; */

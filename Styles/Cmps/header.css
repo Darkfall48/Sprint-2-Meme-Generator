@@ -39,16 +39,18 @@
   background-color: transparent;
   color: #ffffff;
   border: none;
+  border-radius: 35px;
+
   font-size: 1.325em;
-  width: 7.25em;
+  width: 5em;
   height: 2.5em;
   font-weight: 500;
   font-family: poppins-regular;
+  transition: 0.2s;
 }
 .main-nav-list li button:hover {
   background-color: #fefefe;
   color: #21ac91;
-  border-radius: 20px;
   box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.15);
 }
 
