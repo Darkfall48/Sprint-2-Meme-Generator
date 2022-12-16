@@ -2,20 +2,10 @@
 
 var gCurrentLanguage = 'fr'
 var gTrans = {
-  'main-nav-gallery': {
-    en: 'Gallery',
-    fr: 'Gallerie',
-    he: 'גלריה',
-  },
-  'main-nav-memes': {
-    en: 'Memes',
-    fr: 'Memes',
-    he: 'ממים',
-  },
-  'main-nav-about': {
-    en: 'About',
-    fr: 'À Propos',
-    he: 'אודות',
+  title: {
+    en: 'Meme Generator - By Sidney Sebban',
+    fr: 'Générateur de memes - Par Sidney Sebban',
+    he: 'מחולל הממים - מאת סידני סבן',
   },
   'lang-en': {
     en: 'English',
@@ -31,6 +21,21 @@ var gTrans = {
     en: 'Hebrew',
     fr: 'Hébreu',
     he: 'עברית',
+  },
+  'main-nav-gallery': {
+    en: 'Gallery',
+    fr: 'Gallerie',
+    he: 'גלריה',
+  },
+  'main-nav-memes': {
+    en: 'Memes',
+    fr: 'Memes',
+    he: 'ממים',
+  },
+  'main-nav-about': {
+    en: 'About',
+    fr: 'À Propos',
+    he: 'אודות',
   },
 }
 

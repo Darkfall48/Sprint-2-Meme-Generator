@@ -5,6 +5,8 @@ const MEME_STORAGE_KEY = 'memeDB'
 
 let gKeywordSearchCountMap = { funny: 12, cat: 16, baby: 2 }
 
+// let gSavedMeme = []
+
 let gMeme = {
   selectedImgId: 5,
   selectedLineIdx: 0,
@@ -52,6 +54,10 @@ function switchLine() {
   gMeme.lines.length - 1 === gMeme.selectedLineIdx
     ? (gMeme.selectedLineIdx = 0)
     : gMeme.selectedLineIdx++
+
+  renderMeme()
+  drawRectAfterSeconds(1)
+
   // console.log('Current Line is', gMeme.selectedLineIdx)
 }
 

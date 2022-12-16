@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./Images/Site Design/Icon/meme.ico" />
     <link rel="stylesheet" href="./Styles/imports.css" />
-    <title>Meme Generator - By Sidney Sebban</title>
+    <title data-trans="title">Meme Generator - By Sidney Sebban</title>
   </head>
   <body class="main-layout" onload="onInitGallery()">
     <header class="main-header main-layout">
@@ -73,10 +73,12 @@
               </div>
             </li>
             <li class="keyword-container">
-              <a onclick="setFilter('funny')">funny</a>
-              <a onclick="setFilter('cat')">cat</a>
-              <a onclick="setFilter('movie')">movie</a>
-              <a onclick="setFilter('actor')">actor</a>
+              <a style="font-size: 2rem" onclick="setFilter('funny')">funny</a>
+              <a style="font-size: 1rem" onclick="setFilter('cat')">cat</a>
+              <a style="font-size: 3rem" onclick="setFilter('movie')">movie</a>
+              <a style="font-size: 1.3rem" onclick="setFilter('actor')"
+                >actor</a
+              >
             </li>
             <li class="keyword-list">
               <button class="keyword-button">More</button>
@@ -189,7 +191,7 @@
               <a class="awe-solid awe-c-right"></a>
             </div>
             <div class="save-container">
-              <a href="#" onclick="downloadMeme(this)" download="My Picasso">
+              <a onclick="downloadMeme(this)" download="My Picasso">
                 <button
                   class="awe-solid awe-save save-button"
                   title="Save your Masterpiece to local"

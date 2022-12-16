@@ -23,6 +23,8 @@ function onInitMeme() {
   addEventListeners()
 
   renderMeme()
+
+  drawRectAfterSeconds(1)
 }
 
 //? DONE: renders an image on the canvas and a line of text on top
@@ -103,12 +105,14 @@ function addEventListeners() {
   gCanvas.addEventListener('mousedown', (e) => {
     if (!isRendered) return
     gIsMoving = true
+    drawRect()
     document.body.style.cursor = 'grabbing'
   })
 
   gCanvas.addEventListener('mouseup', (e) => {
     if (!isRendered) return
     gIsMoving = false
+    drawRect()
     document.body.style.cursor = 'auto'
   })
 
@@ -150,6 +154,23 @@ function addEventListeners() {
   })
 }
 
+function drawRect() {
+  const meme = getMeme()
+  // const { offsetX, offsetY } = e
+  let lineIdx = meme.selectedLineIdx
+  let y = meme.lines[lineIdx].pos.y
+  let ySize = meme.lines[lineIdx].size
+  console.log(ySize)
+  gCtx.strokeStyle = 'black'
+  gCtx.strokeRect(0, y - ySize / 2, gCanvas.width, ySize)
+}
+
+function drawRectAfterSeconds(sec) {
+  setTimeout(() => {
+    drawRect()
+  }, sec)
+}
+
 function resizeCanvas() {
   const elContainer = document.querySelector('.canvas-container')
   gCanvas.width = elContainer.offsetWidth - 20
@@ -186,6 +207,7 @@ function setAlignment(value) {
       break
   }
   renderMeme()
+  drawRectAfterSeconds(1)
 }
 
 function moveVertical(value) {
@@ -193,6 +215,7 @@ function moveVertical(value) {
   const meme = getMeme()
   meme.lines[meme.selectedLineIdx].pos.y += value
   renderMeme()
+  drawRectAfterSeconds(1)
 }
 
 function moveHorizontal(value) {
@@ -200,6 +223,7 @@ function moveHorizontal(value) {
   const meme = getMeme()
   meme.lines[meme.selectedLineIdx].pos.x += value
   renderMeme()
+  drawRectAfterSeconds(1)
 }
 
 function changeSize(value) {
@@ -207,31 +231,47 @@ function changeSize(value) {
   const meme = getMeme()
   meme.lines[meme.selectedLineIdx].size += value
   renderMeme()
+  drawRectAfterSeconds(1)
 }
 
 function onAddLine() {
   if (!isRendered) return
   createLine()
   renderMeme()
+  drawRectAfterSeconds(1)
 }
 
 function onDeleteLine() {
   if (!isRendered) return
   deleteLine()
   renderMeme()
+  drawRectAfterSeconds(1)
 }
 
 //? Resolved: ! Not working, Github Cross Origin not allowed
+// ! KNOWN ISSUE: After first download, you need to download it twice to get an updated image
 function downloadMeme(elLink) {
   if (!isRendered) return
-  const data = gCanvas.toDataURL()
-  elLink.href = data
-  console.log(data)
+  renderMeme()
+
+  //? SetTimeout is here because we need to wait for 'renderMeme()' function to finish, to prevent rect to be print.
+  setTimeout(() => {
+    const data = gCanvas.toDataURL()
+    elLink.href = data
+    console.log(data)
+  }, 1)
+
+  // ! Until Issue is find, this is a temporary solution
+  setTimeout(() => {
+    window.location.reload()
+  }, 8000)
 }
 
+//! KNOWN ISSUE: Rect is printed, renderMeme() have no time to finish
 //? DONE: Use the new Web Share API to share your meme
 async function shareMeme() {
   if (!isRendered) return
+  renderMeme()
 
   const data = gCanvas.toDataURL()
   const blob = await (await fetch(data)).blob()
