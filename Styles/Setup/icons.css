@@ -96,3 +96,24 @@
 .awe-regular::before {
   font-family: awe-regular;
 }
+
+@font-face {
+  font-family: awe-brands;
+  src: url('../../Fonts/Awesome/fa-brands-400.ttf');
+}
+
+.awe-brands.awe-instagram::before {
+  content: '\f16d';
+}
+.awe-brands.awe-github::before {
+  content: '\f09b';
+}
+.awe-brands.awe-linkedin::before {
+  content: '\f0e1';
+}
+.awe-brands.awe-facebook::before {
+  content: '\f09a';
+}
+.awe-brands.awe-youtube::before {
+  content: '\f167';
+}

@@ -109,8 +109,7 @@
     margin-top: 0 !important;
     border-radius: 0;
     width: 100vw !important;
-    padding-inline-start: 5vw;
-    padding-inline-end: 12vw;
+    padding-inline: 5vw;
 
     height: fit-content;
     align-items: flex-start;

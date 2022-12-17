@@ -18,7 +18,7 @@
   justify-content: center;
 }
 
-@media (max-width: 780px) {
+@media (max-width: 720px) {
   .main-layout > *:not(.full) {
     max-width: var(--s);
   }
@@ -32,7 +32,7 @@
   }
 }
 
-@media (min-width: 780px) {
+@media (min-width: 720px) {
   .main-layout > *:not(.full) {
     max-width: var(--m);
   }

@@ -249,26 +249,38 @@
   border-radius: 15px;
 }
 
-@media (max-width: 780px) {
+@media (max-width: 720px) {
   .meme-section {
     flex-direction: column;
-    padding-top: 8vh;
+    padding-top: 13vh;
   }
 
   .editor-container {
     flex-basis: 30%;
     background-color: none;
   }
+
+  .meme-canvas {
+    width: 100% !important;
+  }
 }
 
-@media (min-width: 780px) {
+@media (min-width: 720px) {
   .meme-section {
     flex-direction: column;
+  }
+
+  .meme-canvas {
+    width: 100% !important;
   }
 }
 
 @media (min-width: 1060px) {
   .meme-section {
     flex-direction: row;
+  }
+
+  .meme-canvas {
+    width: 450px !important;
   }
 }

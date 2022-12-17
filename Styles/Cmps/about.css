@@ -1,0 +1,94 @@
+/** About **/
+.about-section {
+  padding: 30px;
+  margin-bottom: 16px;
+  place-content: center;
+  background-color: #383b42;
+}
+
+/** Containers **/
+
+.about-article {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+}
+
+.my-container {
+  flex-basis: 50%;
+  /* background-color: blue; */
+  display: flex;
+  place-content: center;
+  padding: 10px;
+}
+
+.description-container {
+  flex-basis: 50%;
+  /* background-color: red; */
+}
+
+.my-picture-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  place-items: center;
+}
+
+.picture-title {
+  border-radius: 50%;
+}
+
+.name-title {
+  font-family: poppins-semi-bold;
+}
+.job-title {
+  font-family: poppins-regular;
+  color: lightblue;
+}
+
+.social-links {
+  display: flex;
+  place-content: center;
+  /* justify-content: space-between; */
+  flex-basis: 100%;
+}
+
+.social-links li {
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+}
+
+.social-links li a svg {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: #383b42;
+
+  /* display: block; */
+  /* font-size: 3em; */
+  width: 2.812em;
+  height: 2.825em;
+}
+.social-links li a svg:hover {
+  fill: darkgray;
+}
+.social-links li a svg:active {
+  font-size: 2em;
+}
+
+.description {
+  padding-inline-end: 10vw;
+  padding-inline-start: 10vw;
+  color: lightgray;
+  font-size: 1em;
+  font-family: poppins-light;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .about-section {
+    padding-top: 15vh;
+  }
+}

@@ -27,6 +27,10 @@ function onInitMeme() {
   drawRectAfterSeconds(1)
 }
 
+function getCanvas() {
+  return gCanvas
+}
+
 //? DONE: renders an image on the canvas and a line of text on top
 function renderMeme() {
   if (!isSized) {
@@ -49,8 +53,9 @@ function drawImgFromRemote(image) {
     const { height, width } = img
     // console.log('Image: Height', height, 'Width', width)
     // console.log('Canvas: Height', gCanvas.height, 'Width', gCanvas.width)
+    // gCanvas.width = 200
     gCanvas.height = (gCanvas.height * height) / width
-    // console.log('New Canvas: Height', gCanvas.height, 'Width', gCanvas.width)
+    console.log('New Canvas: Height', gCanvas.height, 'Width', gCanvas.width)
     isSized = true
   }
   img.onload = () => {

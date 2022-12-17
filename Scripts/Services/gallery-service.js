@@ -66,8 +66,15 @@ function _createImages() {
       _createImage('./Images/Gallery/Fixed/18.jpg', ['movie', 'toys']),
       _createImage('./Images/Gallery/Various/9.jpg', ['funny', 'baby', 'kid']),
       _createImage('./Images/Gallery/Various/2.jpg', ['movie', 'toys']),
-      _createImage('./Images/Gallery//Various/004.jpg', ['movie', 'toys']),
-      _createImage('./Images/Gallery//Various/leo.jpg', ['movie', 'toys']),
+      _createImage('./Images/Gallery/Various/004.jpg', ['movie', 'toys']),
+      _createImage('./Images/Gallery/Various/leo.jpg', ['movie', 'toys']),
+      _createImage('./Images/Gallery/Shows/1.webp', [
+        'adam',
+        'wednesday',
+        'spooky',
+      ]),
+      _createImage('./Images/Gallery/Anime/1.jpg', ['anime']),
+      _createImage('./Images/Gallery/Anime/2.png', ['anime']),
     ]
     console.log('Gallery Created')
   }

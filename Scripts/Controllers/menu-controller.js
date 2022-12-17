@@ -1,10 +1,14 @@
 'use strict'
 
 function onShowGallery() {
-  const elEditor = document.querySelector('.meme-section')
   const elGallery = document.querySelector('.gallery-section')
-  elEditor.classList.add('hide')
+  const elEditor = document.querySelector('.meme-section')
+  const elAbout = document.querySelector('.about-section')
+
   elGallery.classList.remove('hide')
+
+  elEditor.classList.add('hide')
+  elAbout.classList.add('hide')
 }
 
 function onShowOptions() {
@@ -22,8 +26,23 @@ function onShowOptions() {
 function onDisplayEditor() {
   const elEditor = document.querySelector('.meme-section')
   const elGallery = document.querySelector('.gallery-section')
+  const elAbout = document.querySelector('.about-section')
+
   elEditor.classList.remove('hide')
+
   elGallery.classList.add('hide')
+  elAbout.classList.add('hide')
+}
+
+function onDisplayAbout() {
+  const elAbout = document.querySelector('.about-section')
+  const elEditor = document.querySelector('.meme-section')
+  const elGallery = document.querySelector('.gallery-section')
+
+  elAbout.classList.remove('hide')
+
+  elGallery.classList.add('hide')
+  elEditor.classList.add('hide')
 }
 
 function onTranslation(lang) {

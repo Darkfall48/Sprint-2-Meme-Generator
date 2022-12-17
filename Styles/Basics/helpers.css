@@ -25,12 +25,3 @@
 .rtl {
   direction: rtl;
 }
-
-.mobile-header {
-  /** TO HEADER **/
-  position: fixed;
-  grid-template-rows: 1fr 5fr;
-  height: 40vh;
-  margin-top: 0 !important;
-  border-radius: 0;
-}

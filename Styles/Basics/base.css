@@ -35,3 +35,12 @@ button {
   cursor: pointer;
   font-size: 1em;
 }
+
+a {
+  text-decoration: none;
+}
+
+svg {
+  width: 25px;
+  height: 25px;
+}

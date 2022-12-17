@@ -70,6 +70,12 @@
   background-image: linear-gradient(-86deg, #33be6d 0%, #0c98b9 100%);
   padding: 0.5em 1.5em;
   border: none;
+
+  transition: font-size 0.2s;
+  cursor: not-allowed;
+}
+.gallery-nav-list .keyword-button:active {
+  font-size: 1em;
 }
 
 .search-bar-container {
@@ -99,6 +105,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
+  transition: font-size 0.2s;
+}
+
+.search-icon:active {
+  font-size: 0.875em;
 }
 
 /** Content **/
@@ -123,7 +134,7 @@
 
 @media (max-width: 720px) {
   .gallery-section {
-    padding-top: 12vh;
+    padding-top: 13vh;
     /* width: 100vw; */
   }
   .gallery-nav-list {

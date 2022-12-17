@@ -7,30 +7,32 @@ let gKeywordSearchCountMap = { funny: 12, cat: 16, baby: 2 }
 
 // let gSavedMeme = []
 
-let gMeme = {
-  selectedImgId: 5,
-  selectedLineIdx: 0,
-  lines: [
-    {
-      txt: 'I sometimes eat Falafel',
-      size: 40,
-      align: 'center',
-      color: 'white',
-      strokeColor: 'black',
-      pos: { x: 150, y: 150 },
-    },
-    {
-      txt: 'My cat is the best',
-      size: 20,
-      align: 'center',
-      color: 'white',
-      strokeColor: 'black',
-      pos: { x: 150, y: 120 },
-    },
-  ],
-}
+let gMeme
 
-function initMeme() {}
+function initMeme() {
+  gMeme = {
+    selectedImgId: 5,
+    selectedLineIdx: 0,
+    lines: [
+      {
+        txt: 'I sometimes eat Falafel',
+        size: 40,
+        align: 'center',
+        color: 'white',
+        strokeColor: 'black',
+        pos: { x: 225, y: 150 },
+      },
+      {
+        txt: 'My cat is the best',
+        size: 30,
+        align: 'center',
+        color: 'white',
+        strokeColor: 'black',
+        pos: { x: 225, y: 50 },
+      },
+    ],
+  }
+}
 
 function openEditor() {
   onInitMeme()
@@ -41,6 +43,7 @@ function getMeme() {
 }
 
 function setMeme(imageId) {
+  initMeme()
   gMeme.selectedImgId = imageId
 }
 
@@ -64,11 +67,11 @@ function switchLine() {
 function createLine() {
   let line = {
     txt: 'New Line',
-    size: 20,
+    size: 50,
     align: 'center',
-    color: 'red',
+    color: 'white',
     strokeColor: 'black',
-    pos: { x: 150, y: getRandomIntInclusive(12, 400) },
+    pos: { x: getCanvas().width / 2, y: getRandomIntInclusive(12, 400) },
   }
   gMeme.lines.push(line)
   gMeme.selectedLineIdx = gMeme.lines.length - 1

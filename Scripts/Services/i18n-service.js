@@ -37,6 +37,26 @@ var gTrans = {
     fr: 'À Propos',
     he: 'אודות',
   },
+  'keyword-button': {
+    en: 'More',
+    fr: 'Plus',
+    he: 'עוד',
+  },
+  'save-button': {
+    en: 'Save',
+    fr: 'Sauvegarder',
+    he: 'שמור',
+  },
+  'publish-button': {
+    en: 'Upload',
+    fr: 'Téléverser',
+    he: 'העלה',
+  },
+  'share-button': {
+    en: 'Share',
+    fr: 'Partager',
+    he: 'שתף',
+  },
 }
 
 function setLang(lang) {
