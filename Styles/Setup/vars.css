@@ -1,25 +1,22 @@
 :root {
+  /* ? Had no time to finish */
   /** pallete **/
-  /* header color */
-  --clr0: #292929;
-  /* brand color */
-  --clr1: #58c93a;
-  /* paragraph color */
-  --clr2: #606060;
-  /* card title color */
-  --clr3: #4f4e4e;
-  /* white color */
-  --clr4: #ffffff;
-  /* border color  */
-  --clr5: #e1e0e0;
-  /* card border color */
-  --clr6: #c2c2c2;
-  /* a footer color */
-  --clr7: #818181;
-  /* footer bg */
-  --clr8: #f8f8f8;
-  /* footer CR */
-  --clr9: #a6a6a6;
+  --clr0: #ebeef317;
+  --clr1: #eceff41c;
+  --clr2: #22252c;
+  --clr3: #5c5c5c8c;
+  --clr4: #ffffff94;
+  --clr5: #a9a9a9;
+  --clr6: #bbc4d1;
+  --clr7: #ebeef3;
+  --clr8: #3d3d3d;
+  --clr9: #ffffff;
+  --clr10: #015d339c;
+  --clr11: #015d33;
+  --clr12: #3f714c;
+  --clr13: #8dcf7e;
+  --clr14: #82a28a;
+  --clr15: #19a59f;
 
   /** bp **/
   --s: 600px;

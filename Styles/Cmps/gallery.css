@@ -13,10 +13,6 @@
 
 .gallery-nav-list {
   display: grid;
-  /* grid-template-columns: 1fr 4fr 4fr 1fr;
-  grid-template-rows: 1fr; */
-  /* grid-template-areas: 'a b c'; */
-  /* place-content: center; */
   gap: 15px;
   place-items: center;
 }
@@ -135,36 +131,28 @@
 @media (max-width: 720px) {
   .gallery-section {
     padding-top: 13vh;
-    /* width: 100vw; */
   }
   .gallery-nav-list {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-
-    /* grid-template-columns: repeat(auto-fit, minmax(auto-fit, 1fr));
-    grid-template-rows: 1fr 1fr 1fr; */
   }
 
   .gallery-nav-list .keyword-container {
-    /* grid-area: key !important; */
     grid-column: span 2;
     grid-row: 1;
   }
 
   .gallery-nav-list .search-bar {
-    /* grid-area: search !important; */
     grid-column: span 2;
     grid-row: 2;
   }
   .gallery-nav-list .import-picture {
-    /* grid-area: camera !important; */
     grid-column: 1;
     grid-row: 3;
     justify-self: flex-end;
     padding-right: 40px;
   }
   .gallery-nav-list .keyword-list {
-    /* grid-area: button !important; */
     grid-column: 2;
     grid-row: 3;
     justify-self: flex-start;
@@ -179,23 +167,19 @@
   }
 
   .gallery-nav-list .keyword-container {
-    /* grid-area: key !important; */
     grid-column: span 3;
     grid-row: 1;
   }
 
   .gallery-nav-list .search-bar {
-    /* grid-area: search !important; */
     grid-column: 2;
     grid-row: 2;
   }
   .gallery-nav-list .import-picture {
-    /* grid-area: camera !important; */
     grid-column: 1;
     grid-row: 2;
   }
   .gallery-nav-list .keyword-list {
-    /* grid-area: button !important; */
     grid-column: 3;
     grid-row: 2;
   }
@@ -205,29 +189,22 @@
   .gallery-nav-list {
     grid-template-columns: 1fr 4fr 4fr 1fr;
     grid-template-rows: 1fr;
-    /* grid-template-areas: 'camera search key button'; */
-    /* place-content: center; */
     gap: 15px;
-    /* place-items: center; */
   }
 
   .gallery-nav-list .import-picture {
-    /* grid-area: camera !important; */
     grid-column: 1;
     grid-row: 1;
   }
   .gallery-nav-list .search-bar {
-    /* grid-area: search !important; */
     grid-column: 2;
     grid-row: 1;
   }
   .gallery-nav-list .keyword-container {
-    /* grid-area: key !important; */
     grid-column: 3;
     grid-row: 1;
   }
   .gallery-nav-list .keyword-list {
-    /* grid-area: button !important; */
     grid-column: 4;
     grid-row: 1;
   }

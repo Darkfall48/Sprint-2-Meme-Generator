@@ -9,8 +9,8 @@ html {
 
 body {
   margin: 0;
-  background-color: #22252c;
-  color: #ffffff;
+  background-color: var(--clr2);
+  color: var(--clr9);
 }
 
 img {

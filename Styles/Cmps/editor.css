@@ -13,15 +13,11 @@
 /** Meme **/
 .canvas-container {
   flex-basis: 30%;
-  /* box-shadow: 1px 5px 0 rgba(13, 14, 16, 0.65),
-    inset 0 5px 0 rgba(255, 255, 255, 0.25); */
-  /* border-radius: 25px; */
-  /* background-color: #ffffff; */
   display: flex;
 }
 
 .meme-canvas {
-  border: 6px solid rgba(235, 238, 243, 0.09);
+  border: 6px solid var(--clr0);
 
   place-self: center;
   border-radius: 25px;
@@ -32,7 +28,7 @@
   flex-basis: 30%;
   display: flex;
   border-radius: 30px;
-  background-color: rgba(236, 239, 244, 0.11);
+  background-color: var(--clr1);
 }
 
 .editor-nav {
@@ -41,8 +37,7 @@
 
 .editor-nav button {
   font-size: 1.5em;
-  box-shadow: 1px 5px 0 rgba(92, 92, 92, 0.55),
-    inset 0 5px 0 rgba(255, 255, 255, 0.58);
+  box-shadow: 1px 5px 0 var(--clr3), inset 0 5px 0 var(--clr4);
   height: 2.5rem;
   width: 2.5rem;
   border: none;
@@ -51,16 +46,15 @@
 }
 .editor-nav button:active {
   font-size: 1em;
-  color: darkgray;
+  color: var(--clr5);
 }
 
 /** Text Input Container **/
 .text-input-container {
   height: 37px;
-  /* width: 445px; */
   border-radius: 28px;
-  box-shadow: 1px 5px 0 #bbc4d1, inset 0 5px 0 #ffffff;
-  background-color: #ebeef3;
+  box-shadow: 1px 5px 0 var(--clr6), inset 0 5px 0 var(--clr9);
+  background-color: var(--clr7);
   display: flex;
   place-items: center;
   margin-bottom: 36px;
@@ -71,7 +65,7 @@
   font-size: 1.5625em;
   font-family: poppins-medium;
   text-transform: uppercase;
-  color: #3d3d3d;
+  color: var(--clr8);
 }
 
 /** Lines and Movement Container **/
@@ -92,15 +86,15 @@
 }
 
 .add-button {
-  color: white;
-  text-shadow: 1px 3px 0 rgba(1, 93, 51, 0.61);
-  box-shadow: 1px 5px 0 #015d33, inset 0 5px 0 rgba(255, 255, 255, 0.58) !important;
-  background-image: linear-gradient(-38deg, #8dcf7e 0%, #3f714c 100%);
+  color: var(--clr9);
+  text-shadow: 1px 3px 0 var(--clr10);
+  box-shadow: 1px 5px 0 var(--clr11), inset 0 5px 0 var(--clr4) !important;
+  background-image: linear-gradient(-38deg, var(--clr13) 0%, var(--clr12));
 }
 .switch-button {
-  color: white;
-  text-shadow: 1px 3px 0 rgba(1, 93, 51, 0.61);
-  box-shadow: 1px 5px 0 #036e78, inset 0 5px 0 rgba(255, 255, 255, 0.58) !important;
+  color: var(--clr9);
+  text-shadow: 1px 3px 0 var(--clr10);
+  box-shadow: 1px 5px 0 #036e78, inset 0 5px 0 var(--clr4) !important;
 
   background-image: linear-gradient(
     -38deg,
@@ -110,9 +104,9 @@
   );
 }
 .delete-button {
-  color: white;
-  text-shadow: 1px 3px 0 rgba(1, 93, 51, 0.61);
-  box-shadow: 1px 5px 0 #8c0606, inset 0 5px 0 rgba(255, 255, 255, 0.58) !important;
+  color: var(--clr9);
+  text-shadow: 1px 3px 0 var(--clr10);
+  box-shadow: 1px 5px 0 #8c0606, inset 0 5px 0 var(--clr4) !important;
   background-image: linear-gradient(
     -38deg,
     #cf1d37 0%,
@@ -123,13 +117,11 @@
 
 /** Movement Input Container **/
 .movement-input-container {
-  background-color: #82a28a;
-  /* background-color: #6eb47d; */
+  background-color: var(--clr14);
   border-radius: 50%;
   display: grid;
   grid-template-columns: repeat(3, fit-content);
   grid-template-rows: repeat(3, fit-content);
-  /* margin-left: auto; */
   place-content: center;
   place-items: center;
   height: fit-content;
@@ -155,7 +147,7 @@
 
 /** Text Control Container **/
 .text-control-container {
-  background-color: #19a59f;
+  background-color: var(--clr15);
   border-radius: 15px;
   margin: auto;
   margin-bottom: 22px;
@@ -205,7 +197,7 @@
 /** Sticker Container **/
 .sticker-container {
   border-radius: 45px;
-  background-color: #ffffff;
+  background-color: var(--clr9);
   color: black;
   display: flex;
   margin-bottom: 25px;
@@ -224,12 +216,12 @@
   width: max-content;
   height: max-content;
   font-size: 1.3125em;
-  color: white;
+  color: var(--clr9);
   padding: 8px;
 }
 
 .save-container button:active {
-  color: white;
+  color: var(--clr9);
 }
 
 .save-container .save-button {

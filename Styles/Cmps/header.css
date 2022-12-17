@@ -66,8 +66,6 @@
 
 #dropdown-langs-content {
   margin: auto;
-  /* padding: auto; */
-  /* text-align: center; */
   color: #ffffff;
   font-size: 1.325em;
 
@@ -83,8 +81,6 @@
 }
 #dropdown-langs-content > option {
   margin: auto;
-  /* padding: auto; */
-  /* text-align: center; */
   color: black;
   font-size: 1em;
 
@@ -104,8 +100,6 @@
 @media (max-width: 720px) {
   .main-header {
     position: fixed;
-    /* margin: auto !important; */
-    /* grid-template-rows: 1fr 5fr; */
     margin-top: 0 !important;
     border-radius: 0;
     width: 100vw !important;

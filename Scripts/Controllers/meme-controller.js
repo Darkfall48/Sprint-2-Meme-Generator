@@ -8,18 +8,14 @@ let gPos
 let isRendered
 let isSized
 
-// let gOffPos = {}
-
 let gIsMoving
 
 function onInitMeme() {
   onDisplayEditor()
   isRendered = false
   isSized = false
-  // initMeme()
   gCanvas = document.querySelector('.meme-canvas')
   gCtx = gCanvas.getContext('2d')
-  // gPos = { x: gCanvas.width / 2, y: gCanvas.height / 2 }
   addEventListeners()
 
   renderMeme()
@@ -55,7 +51,7 @@ function drawImgFromRemote(image) {
     // console.log('Canvas: Height', gCanvas.height, 'Width', gCanvas.width)
     // gCanvas.width = 200
     gCanvas.height = (gCanvas.height * height) / width
-    console.log('New Canvas: Height', gCanvas.height, 'Width', gCanvas.width)
+    // console.log('New Canvas: Height', gCanvas.height, 'Width', gCanvas.width)
     isSized = true
   }
   img.onload = () => {
@@ -75,7 +71,6 @@ function drawTxt() {
   lines.forEach((line) => {
     const { txt, size, color, strokeColor, align, pos } = line
     const { x, y } = pos
-    // console.log(line)
 
     gCtx.lineWidth = 2
     gCtx.strokeStyle = strokeColor
@@ -91,23 +86,11 @@ function drawTxt() {
 function clearCanvas() {
   if (!isRendered) return
   gCtx.clearRect(0, 0, gCanvas.width, gCanvas.height)
-  console.log('Canvas is cleaned')
+  // console.log('Canvas is cleaned')
   // console.clear()
 }
 
 function addEventListeners() {
-  // let moveDetect = new Hammer(gCanvas)
-  // moveDetect.add(
-  //   new Hammer.Pan({ direction: Hammer.DIRECTION_ALL, threshold: 0 })
-  // )
-  // moveDetect.on('pan', (ev) => {
-  //   console.log(ev)
-  //   console.log(ev.offsetDirection)
-  //   gPos.x = gOffPos.x
-  //   gPos.y = gOffPos.y
-  //   renderMeme()
-  // })
-
   gCanvas.addEventListener('mousedown', (e) => {
     if (!isRendered) return
     gIsMoving = true
@@ -127,10 +110,7 @@ function addEventListeners() {
     if (!gIsMoving) return
     const meme = getMeme()
     const { offsetX, offsetY } = e
-    // gOffPos.x = offsetX
-    // gOffPos.y = offsetY
-    // gPos.x = offsetX
-    // gPos.y = offsetY
+
     meme.lines[meme.selectedLineIdx].pos.x = offsetX
     meme.lines[meme.selectedLineIdx].pos.y = offsetY
     renderMeme()
@@ -162,7 +142,6 @@ function addEventListeners() {
 
 function drawRect() {
   const meme = getMeme()
-  // const { offsetX, offsetY } = e
   let lineIdx = meme.selectedLineIdx
   let y = meme.lines[lineIdx].pos.y
   let ySize = meme.lines[lineIdx].size

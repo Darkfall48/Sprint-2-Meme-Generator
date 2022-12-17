@@ -76,7 +76,7 @@ function _createImages() {
       _createImage('./Images/Gallery/Anime/1.jpg', ['anime']),
       _createImage('./Images/Gallery/Anime/2.png', ['anime']),
     ]
-    console.log('Gallery Created')
+    // console.log('Gallery Created')
   }
   _saveGalleryToStorage()
 }
