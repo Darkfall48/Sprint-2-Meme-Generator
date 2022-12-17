@@ -84,6 +84,10 @@
   content: '\f083';
 }
 
+.awe-solid.awe-more::before {
+  content: '\f0c9';
+}
+
 /* regular */
 @font-face {
   font-family: awe-regular;

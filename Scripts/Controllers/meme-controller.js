@@ -36,6 +36,7 @@ function renderMeme() {
   }
   const meme = getMeme()
   const image = getImageById(meme.selectedImgId)
+
   drawImgFromRemote(image)
 }
 

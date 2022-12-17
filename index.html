@@ -19,18 +19,27 @@
       </div>
       <nav class="main-nav">
         <ul class="main-nav-list clean-list clean-link">
-          <li>
+          <li class="main-nav-gallery-list hide">
             <button
               data-trans="main-nav-gallery"
+              class="main-nav-gallery"
               onclick="onShowGallery()"
               href="#"
             >
               Gallery
             </button>
           </li>
-          <li><button data-trans="main-nav-memes" href="#">Memes</button></li>
-          <li><button data-trans="main-nav-about" href="#">About</button></li>
-          <li class="dropdown-langs">
+          <li class="main-nav-memes-list hide">
+            <button data-trans="main-nav-memes" class="main-nav-memes" href="#">
+              Memes
+            </button>
+          </li>
+          <li class="main-nav-about-list hide">
+            <button data-trans="main-nav-about" class="main-nav-about" href="#">
+              About
+            </button>
+          </li>
+          <li class="dropdown-langs hide">
             <select
               name="dropdown-langs-content"
               id="dropdown-langs-content"
@@ -42,6 +51,13 @@
               <option data-trans="lang-he" value="he">Hebrew</option>
             </select>
           </li>
+          <li class="main-nav-more-list">
+            <button
+              onclick="onShowOptions()"
+              class="main-nav-more awe-solid awe-more"
+              href="#"
+            ></button>
+          </li>
         </ul>
       </nav>
     </header>
@@ -50,16 +66,6 @@
       <section class="gallery-section">
         <nav class="gallery-nav">
           <ul class="gallery-nav-list clean-list">
-            <li class="import-picture">
-              <label for="import-picture-input">
-                <h1 class="awe-solid awe-camera camera-icon"></h1>
-                <input
-                  id="import-picture-input"
-                  type="file"
-                  accept="image/png, image/jpg, image/jpeg"
-                  onchange="onUploadImg(this.value)"
-              /></label>
-            </li>
             <li class="search-bar">
               <div class="search-bar-container">
                 <input
@@ -68,7 +74,7 @@
                   type="text"
                   name="search-bar-value"
                   id="search-bar-value"
-                  placeholder="Search by Keywords"
+                  placeholder="Search by Keyword"
                 /><a class="search-icon awe-solid awe-search"></a>
               </div>
             </li>
@@ -82,6 +88,16 @@
             </li>
             <li class="keyword-list">
               <button class="keyword-button">More</button>
+            </li>
+            <li class="import-picture">
+              <label for="import-picture-input">
+                <h1 class="awe-solid awe-camera camera-icon"></h1>
+                <input
+                  id="import-picture-input"
+                  type="file"
+                  accept="image/png, image/jpg, image/jpeg"
+                  onchange="onUploadImg(this.value)"
+              /></label>
             </li>
           </ul>
         </nav>

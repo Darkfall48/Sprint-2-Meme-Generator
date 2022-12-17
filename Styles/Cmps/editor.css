@@ -252,6 +252,7 @@
 @media (max-width: 780px) {
   .meme-section {
     flex-direction: column;
+    padding-top: 8vh;
   }
 
   .editor-container {
