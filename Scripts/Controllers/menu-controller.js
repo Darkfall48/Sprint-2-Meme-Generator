@@ -46,7 +46,7 @@ function onDisplayAbout() {
 }
 
 function onTranslation(lang) {
-  console.log(lang)
+  // console.log(lang)
   setLang(lang)
   doTrans()
 }

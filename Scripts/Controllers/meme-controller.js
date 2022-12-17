@@ -145,7 +145,6 @@ function drawRect() {
   let lineIdx = meme.selectedLineIdx
   let y = meme.lines[lineIdx].pos.y
   let ySize = meme.lines[lineIdx].size
-  console.log(ySize)
   gCtx.strokeStyle = 'black'
   gCtx.strokeRect(0, y - ySize / 2, gCanvas.width, ySize)
 }

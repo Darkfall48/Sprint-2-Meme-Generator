@@ -68,9 +68,8 @@ function setLang(lang) {
 }
 
 function doTrans() {
-  console.log('I am here')
   const els = document.querySelectorAll('[data-trans]')
-  console.log(els)
+  // console.log(els)
   els.forEach((el) => {
     const transKey = el.dataset.trans
     const translation = getTrans(transKey)
