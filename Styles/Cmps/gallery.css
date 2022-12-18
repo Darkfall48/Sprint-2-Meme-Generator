@@ -67,7 +67,7 @@
   font-family: poppins-regular;
   box-shadow: 0 3px 6px 1px var(--clr-2);
   border-radius: 3em;
-  background-image: linear-gradient(-86deg, #33be6d 0%, #0c98b9 100%);
+  background-image: var(--clr20);
   padding: 0.5em 1.5em;
   border: none;
 
@@ -100,7 +100,7 @@
 
 .search-icon {
   font-size: 1.2em;
-  background-image: linear-gradient(-86deg, #33be6d 0%, #0c98b9 100%);
+  background-image: var(--clr20);
   background-size: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -210,7 +210,7 @@
 
   /* Scroll Bar - Slider */
   .gallery-container::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(-86deg, #33be6d 0%, #0c98b9 100%);
+    background-image: var(--clr20);
     background-color: #22252c;
     border-radius: 7px;
   }

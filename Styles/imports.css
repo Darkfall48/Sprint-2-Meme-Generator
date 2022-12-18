@@ -1,3 +1,6 @@
+/* Normalize */
+@import './Setup/normalize.css';
+
 /* Basic */
 @import './Basics/base.css';
 @import './Basics/helpers.css';
