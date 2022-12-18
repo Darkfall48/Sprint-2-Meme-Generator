@@ -1,5 +1,5 @@
 .main-header {
-  display: flex;
+  display: grid;
   place-items: center;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
@@ -98,6 +98,7 @@
 
 @media (max-width: 720px) {
   .main-header {
+    display: flex !important;
     position: fixed;
     margin-top: 0 !important;
     border-radius: 0;
