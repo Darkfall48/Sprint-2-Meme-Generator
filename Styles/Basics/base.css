@@ -44,3 +44,8 @@ svg {
   width: 25px;
   height: 25px;
 }
+
+/* Scroll Bar - Main */
+::-webkit-scrollbar {
+  display: none;
+}
