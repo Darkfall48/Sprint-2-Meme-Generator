@@ -1,5 +1,5 @@
 .main-header {
-  display: grid;
+  display: flex;
   place-items: center;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;

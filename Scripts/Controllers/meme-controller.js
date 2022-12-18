@@ -247,9 +247,9 @@ function downloadMeme(elLink) {
   }, 1)
 
   // ! Until Issue is find, this is a temporary solution
-  setTimeout(() => {
-    window.location.reload()
-  }, 8000)
+  // setTimeout(() => {
+  //   window.location.reload()
+  // }, 8000)
 }
 
 //! KNOWN ISSUE: Rect is printed, renderMeme() have no time to finish
