@@ -209,7 +209,8 @@
 .save-container {
   display: flex;
   place-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
 }
 
 .save-container button {
