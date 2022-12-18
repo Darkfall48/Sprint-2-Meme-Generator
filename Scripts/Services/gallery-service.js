@@ -74,10 +74,10 @@ function _createImages() {
 }
 
 function createImageFromUser(url) {
-  let keywords = prompt('Enter keywords separated by commas', 'funny,meme')
+  let keywords = prompt('Enter keywords separated by commas', 'funny,meme') //KeywordStr
   if (!keywords) keywords = 'unknown'
 
-  //? Use this line if we want to force the user to put the whole word to get a result
+  // ? Use this line if we want to force the user to put the whole word to get a result
   // keywords = keywords.toLowerCase().split(',')
 
   const image = { id: makeId(), url, keywords }
