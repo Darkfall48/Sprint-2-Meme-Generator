@@ -104,7 +104,7 @@
     width: 100vw !important;
     padding-inline: 5vw;
 
-    height: fit-content;
+    /* height: fit-content; */
     align-items: flex-start;
 
     box-shadow: 1px 0px 8px 2px var(--clr-3);
