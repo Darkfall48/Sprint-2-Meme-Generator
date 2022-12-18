@@ -96,6 +96,7 @@
   padding: 10px;
   color: var(--clr19);
   width: 100%;
+  text-align: left;
 }
 
 .search-icon {
@@ -134,7 +135,7 @@
 
 @media (max-width: 720px) {
   .gallery-section {
-    padding-top: 13vh;
+    padding-top: 20vh;
   }
   .gallery-nav-list {
     grid-template-columns: 1fr 1fr;
