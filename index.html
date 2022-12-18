@@ -102,12 +102,15 @@
             </li>
             <li class="import-picture">
               <label for="import-picture-input">
-                <h1 class="awe-solid awe-camera camera-icon"></h1>
+                <h1
+                  class="awe-solid awe-camera camera-icon"
+                  title="Upload a meme image"
+                ></h1>
                 <input
                   id="import-picture-input"
                   type="file"
                   accept="image/png, image/jpg, image/jpeg"
-                  onchange="onUploadImg(this.value)"
+                  onchange="onUploadImg(event)"
               /></label>
             </li>
           </ul>
@@ -260,9 +263,11 @@
                   alt="That's me"
               /></a>
               <h1 class="name-title">Sidney Sebban</h1>
-              <p class="job-title">Full Stack Developer</p>
+              <p data-trans="job-title-about-section" class="job-title">
+                Full Stack Developer
+              </p>
               <ul class="social-links clean-list">
-                <li>
+                <li title="Instagram">
                   <a
                     href="https://www.instagram.com/darkfall48/"
                     target="_blank"
@@ -278,7 +283,7 @@
                     </svg>
                   </a>
                 </li>
-                <li>
+                <li title="Youtube">
                   <a href="https://www.youtube.com/@Darkfall48" target="_blank">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -291,7 +296,7 @@
                     </svg>
                   </a>
                 </li>
-                <li>
+                <li title="Facebook">
                   <a
                     href="https://www.facebook.com/sidneysebban"
                     target="_blank"
@@ -307,7 +312,7 @@
                     </svg>
                   </a>
                 </li>
-                <li>
+                <li title="Github">
                   <a href="https://github.com/Darkfall48" target="_blank">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -320,7 +325,7 @@
                     </svg>
                   </a>
                 </li>
-                <li>
+                <li title="LinkedIn">
                   <a
                     href="https://www.linkedin.com/in/sidneysebban/"
                     target="_blank"
@@ -340,7 +345,7 @@
             </div>
           </div>
           <div class="description-container">
-            <p class="description">
+            <p data-trans="description-about-section" class="description">
               Since my childhood, I have always been passionate about new
               technologies. I started with website and video game development as
               well as arduino and robotics projects.
@@ -360,7 +365,15 @@
     </main>
 
     <footer class="main-layout-footer">
-      <small class="owner-credentials">&copy Made By Sidney Sebban</small>
+      <small data-trans="footer-credentials" class="owner-credentials"
+        >&copy 2022 Meme Generator - All Rights Reserved -
+        <a
+          href="https://www.linkedin.com/in/sidneysebban/"
+          target="_blank"
+          class="owner-name"
+          >Sidney Sebban</a
+        >
+      </small>
     </footer>
 
     <!--* Libraries *-->

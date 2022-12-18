@@ -9,6 +9,10 @@ function onShowGallery() {
 
   elEditor.classList.add('hide')
   elAbout.classList.add('hide')
+
+  // Reset Filter
+  gFilterBy = { keyword: '' }
+  renderGallery()
 }
 
 function onShowOptions() {

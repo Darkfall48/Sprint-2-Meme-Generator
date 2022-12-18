@@ -17,7 +17,6 @@
 .main-header .logo {
   cursor: pointer;
   grid-area: logo;
-  /* width: 100%; */
 }
 
 .main-header .logo img {
@@ -47,7 +46,7 @@
 
 .main-nav-list li > button {
   background-color: transparent;
-  color: #ffffff;
+  color: var(--clr9);
   border: none;
   border-radius: 35px;
 
@@ -59,14 +58,14 @@
   transition: 0.2s;
 }
 .main-nav-list li button:hover {
-  background-color: #fefefe;
-  color: #21ac91;
-  box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.15);
+  background-color: var(--clr18);
+  color: var(--clr16);
+  box-shadow: 0 3px 6px 1px var(--clr-2);
 }
 
 #dropdown-langs-content {
   margin: auto;
-  color: #ffffff;
+  color: var(--clr9);
   font-size: 1.325em;
 
   display: block;
@@ -81,7 +80,7 @@
 }
 #dropdown-langs-content > option {
   margin: auto;
-  color: black;
+  color: var(--clr-1);
   font-size: 1em;
 
   display: block;
@@ -108,7 +107,7 @@
     height: fit-content;
     align-items: flex-start;
 
-    box-shadow: 1px 0px 8px 2px #2b2f2e;
+    box-shadow: 1px 0px 8px 2px var(--clr-3);
   }
 
   .main-header .main-nav .main-nav-list {

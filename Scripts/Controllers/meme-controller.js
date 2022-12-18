@@ -118,26 +118,27 @@ function addEventListeners() {
   })
 
   // ! Mobile not working
-  // gCanvas.addEventListener('touchestart', (e) => (gIsMoving = true))
-  // gCanvas.addEventListener('touchend', (e) => (gIsMoving = false))
+  // gCanvas.addEventListener('touchstart', (e) => {
+  //   e.preventDefault()
+  //   gIsMoving = true
+  // })
+  // gCanvas.addEventListener('touchend', (e) => {
+  //   e.preventDefault()
+  //   gIsMoving = false
+  // })
   // gCanvas.addEventListener('touchmove', (e) => {
+  //   e.preventDefault()
+  //   if (!isRendered) return
   //   if (!gIsMoving) return
+  //   const meme = getMeme()
   //   const { offsetX, offsetY } = e
-  //   // gOffPos.x = offsetX
-  //   // gOffPos.y = offsetY
-  //   gPos.x = offsetX
-  //   gPos.y = offsetY
+
+  //   meme.lines[meme.selectedLineIdx].pos.x = offsetX
+  //   meme.lines[meme.selectedLineIdx].pos.y = offsetY
+
   //   renderMeme()
   //   console.log('offsetX, offsetY:', offsetX, offsetY)
   // })
-
-  window.addEventListener('resize', () => {
-    // gStx.save() // Saves the current drawing style state using a stack.
-    // ! Not Working Currently
-    // resizeCanvas()
-    // renderMeme()
-    // gStx.restore() // Restores the drawing style state to the last element on the 'state stack' saved by save().
-  })
 }
 
 function drawRect() {

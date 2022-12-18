@@ -1,6 +1,14 @@
 :root {
   /* ? Had no time to finish */
   /** pallete **/
+  --clr-8: #a9a9a9;
+  --clr-7: #d3d3d3;
+  --clr-6: #fefefe66;
+  --clr-5: #383b42;
+  --clr-4: #272121;
+  --clr-3: #2b2f2e;
+  --clr-2: #00000026;
+  --clr-1: #000000;
   --clr0: #ebeef317;
   --clr1: #eceff41c;
   --clr2: #22252c;
@@ -17,6 +25,10 @@
   --clr13: #8dcf7e;
   --clr14: #82a28a;
   --clr15: #19a59f;
+  --clr16: #21ac91;
+  --clr17: #33be6d;
+  --clr18: #fefefe;
+  --clr19: #fcfcfc;
 
   /** bp **/
   --s: 600px;

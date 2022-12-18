@@ -21,6 +21,10 @@ function getImages() {
   else return filtredImages
 }
 
+function getFilter() {
+  return gFilterBy
+}
+
 function setFilter(value) {
   gFilterBy.keyword = value.toLowerCase()
   renderGallery()
@@ -39,48 +43,55 @@ function _createImages() {
   gImgs = loadFromStorage(GALLERY_STORAGE_KEY)
   if (!gImgs || !gImgs.length) {
     gImgs = [
-      _createImage('./Images/Gallery/Fixed/1.jpg', ['politic', 'trump']),
-      _createImage('./Images/Gallery/Fixed/2.jpg', ['animal', 'dog']),
-      _createImage('./Images/Gallery/Fixed/3.jpg', ['animal', 'dog', 'baby']),
-      _createImage('./Images/Gallery/Fixed/4.jpg', ['animal', 'cat']),
-      _createImage('./Images/Gallery/Fixed/5.jpg', ['kid', 'baby', 'power']),
-      _createImage('./Images/Gallery/Fixed/6.jpg', ['crazy']),
-      _createImage('./Images/Gallery/Fixed/7.jpg', ['funny', 'baby']),
-      _createImage('./Images/Gallery/Fixed/8.jpg', ['pensive', 'actor']),
-      _createImage('./Images/Gallery/Fixed/10.jpg', [
-        'politic',
-        'obama',
-        'barak',
-      ]),
-      _createImage('./Images/Gallery/Fixed/11.jpg', ['love']),
-      _createImage('./Images/Gallery/Fixed/12.jpg', ['funny']),
-      _createImage('./Images/Gallery/Fixed/13.jpg', ['actor', 'di', 'caprio']),
-      _createImage('./Images/Gallery/Fixed/14.jpg', ['movie', 'matrix']),
-      _createImage('./Images/Gallery/Fixed/15.jpg', ['movie', 'lord', 'ring']),
-      _createImage('./Images/Gallery/Fixed/16.jpg', ['movie', 'star', 'space']),
-      _createImage('./Images/Gallery/Fixed/17.jpg', [
-        'politic',
-        'vladimir',
-        'putin',
-      ]),
-      _createImage('./Images/Gallery/Fixed/18.jpg', ['movie', 'toys']),
-      _createImage('./Images/Gallery/Various/9.jpg', ['funny', 'baby', 'kid']),
-      _createImage('./Images/Gallery/Various/2.jpg', ['movie', 'toys']),
-      _createImage('./Images/Gallery/Various/004.jpg', ['movie', 'toys']),
-      _createImage('./Images/Gallery/Various/leo.jpg', ['movie', 'toys']),
-      _createImage('./Images/Gallery/Shows/1.webp', [
-        'adam',
-        'wednesday',
-        'spooky',
-      ]),
-      _createImage('./Images/Gallery/Anime/1.jpg', ['anime']),
-      _createImage('./Images/Gallery/Anime/2.png', ['anime']),
+      _createImage('./Images/Gallery/Fixed/1.jpg', 'politic,trump'),
+      _createImage('./Images/Gallery/Fixed/2.jpg', 'animal,dog'),
+      _createImage('./Images/Gallery/Fixed/3.jpg', 'animal,dog,baby'),
+      _createImage('./Images/Gallery/Fixed/4.jpg', 'animal,cat'),
+      _createImage('./Images/Gallery/Fixed/5.jpg', 'kid,baby,power'),
+      _createImage('./Images/Gallery/Fixed/6.jpg', 'crazy'),
+      _createImage('./Images/Gallery/Fixed/7.jpg', 'funny,baby'),
+      _createImage('./Images/Gallery/Fixed/8.jpg', 'pensive,actor'),
+      _createImage('./Images/Gallery/Fixed/10.jpg', 'politic,obama,barak'),
+      _createImage('./Images/Gallery/Fixed/11.jpg', 'love'),
+      _createImage('./Images/Gallery/Fixed/12.jpg', 'funny'),
+      _createImage('./Images/Gallery/Fixed/13.jpg', 'actor,di,caprio'),
+      _createImage('./Images/Gallery/Fixed/14.jpg', 'movie,matrix'),
+      _createImage('./Images/Gallery/Fixed/15.jpg', 'movie,lord,ring'),
+      _createImage('./Images/Gallery/Fixed/16.jpg', 'movie,star,space'),
+      _createImage('./Images/Gallery/Fixed/17.jpg', 'politic,vladimir,putin'),
+      _createImage('./Images/Gallery/Fixed/18.jpg', 'movie,toys'),
+      _createImage('./Images/Gallery/Various/9.jpg', 'funny,baby,kid'),
+      _createImage('./Images/Gallery/Various/2.jpg', 'movie,toys'),
+      _createImage('./Images/Gallery/Various/004.jpg', 'movie,toys'),
+      _createImage('./Images/Gallery/Various/leo.jpg', 'movie,toys'),
+      _createImage('./Images/Gallery/Shows/1.webp', 'adam,wednesday,spooky'),
+      _createImage('./Images/Gallery/Anime/1.jpg', 'anime'),
+      _createImage('./Images/Gallery/Anime/2.png', 'anime'),
     ]
     // console.log('Gallery Created')
   }
   _saveGalleryToStorage()
 }
+
+function createImageFromUser(url) {
+  let keywords = prompt('Enter keywords separated by commas', 'funny,meme')
+  if (!keywords) keywords = 'unknown'
+
+  //? Use this line if we want to force the user to put the whole word to get a result
+  // keywords = keywords.toLowerCase().split(',')
+
+  const image = { id: makeId(), url, keywords }
+
+  gImgs.unshift(image)
+  _saveGalleryToStorage()
+
+  renderGallery()
+}
+
 function _createImage(url, keywords) {
+  //? Use this line if we want to force the user to put the whole word to get a result
+  // keywords = keywords.toLowerCase().split(',')
+
   return { id: makeId(), url, keywords }
 }
 

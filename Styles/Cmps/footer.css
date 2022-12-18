@@ -1,0 +1,22 @@
+.owner-credentials {
+  font-family: poppins-light;
+  color: var(--clr7);
+  opacity: 0.8;
+}
+
+.owner-name {
+  font-family: poppins-medium;
+  text-decoration: none;
+  color: var(--clr7);
+}
+
+@media (max-width: 720px) {
+  .owner-credentials {
+    font-size: 0.7em;
+  }
+}
+@media (min-width: 720px) {
+  .owner-credentials {
+    font-size: 1rem;
+  }
+}

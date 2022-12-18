@@ -3,7 +3,7 @@
   padding: 30px;
   margin-bottom: 16px;
   place-content: center;
-  background-color: #383b42;
+  background-color: var(--clr-5);
 }
 
 /** Containers **/
@@ -17,7 +17,6 @@
 
 .my-container {
   flex-basis: 50%;
-  /* background-color: blue; */
   display: flex;
   place-content: center;
   padding: 10px;
@@ -25,7 +24,6 @@
 
 .description-container {
   flex-basis: 50%;
-  /* background-color: red; */
 }
 
 .my-picture-container {
@@ -44,7 +42,7 @@
 }
 .job-title {
   font-family: poppins-regular;
-  color: lightblue;
+  color: #add8e6;
 }
 
 .social-links {
@@ -62,26 +60,29 @@
 
 .social-links li a svg {
   padding: 10px;
-  background-color: #fff;
+  background-color: var(--clr9);
   border-radius: 50%;
-  border: #383b42;
+  border: var(--clr-5);
 
   /* display: block; */
   /* font-size: 3em; */
   width: 2.812em;
   height: 2.825em;
+
+  transition: font-size 0.3s;
+  transition: fill 0.8s;
 }
 .social-links li a svg:hover {
-  fill: darkgray;
+  fill: var(--clr-8);
 }
 .social-links li a svg:active {
-  font-size: 2em;
+  font-size: 1.1em;
 }
 
 .description {
   padding-inline-end: 10vw;
   padding-inline-start: 10vw;
-  color: lightgray;
+  color: var(--clr-7);
   font-size: 1em;
   font-family: poppins-light;
   text-align: center;
