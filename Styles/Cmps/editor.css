@@ -70,6 +70,7 @@
 .lines-movement-container {
   display: flex;
   flex-flow: row-reverse;
+  gap: 50px;
   place-items: center;
   justify-content: space-evenly;
   margin-bottom: 27px;
@@ -251,28 +252,33 @@
   }
 
   .editor-nav {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
     padding: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
+    /* padding: 40px; */
   }
 
   .meme-canvas {
     width: 100% !important;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
+    /* margin-inline-start: auto;
+    margin-inline-end: auto; */
     margin-bottom: 8px;
   }
 
   .text-input-container {
     width: 80vw;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
+    /* margin-inline-start: auto;
+    margin-inline-end: auto; */
   }
 
   .sticker-container {
     width: 80%;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
+    /* margin-inline-start: auto;
+    margin-inline-end: auto; */
   }
 
   .save-container {
@@ -281,6 +287,17 @@
 }
 
 @media (min-width: 721px) {
+  .editor-nav {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* padding: 40px; */
+  }
+
   .meme-section {
     flex-direction: column;
   }
