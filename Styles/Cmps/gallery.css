@@ -135,7 +135,7 @@
 
 @media (max-width: 720px) {
   .gallery-section {
-    padding-top: 14vh;
+    padding-top: 18vh;
   }
   .gallery-nav-list {
     grid-template-columns: 1fr 1fr;
