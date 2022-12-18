@@ -26,13 +26,9 @@
 /** Editor **/
 .editor-container {
   flex-basis: 30%;
-  display: flex;
   border-radius: 30px;
+  display: flex;
   background-color: var(--clr1);
-}
-
-.editor-nav {
-  padding: 40px;
 }
 
 .editor-nav button {
@@ -58,6 +54,7 @@
   display: flex;
   place-items: center;
   margin-bottom: 36px;
+  place-content: center;
 }
 
 #text-input-editor {
@@ -253,8 +250,33 @@
     background-color: none;
   }
 
+  .editor-nav {
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   .meme-canvas {
     width: 100% !important;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    margin-bottom: 8px;
+  }
+
+  .text-input-container {
+    width: 80vw;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+  }
+
+  .sticker-container {
+    width: 80%;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+  }
+
+  .save-container {
+    flex-wrap: wrap;
   }
 }
 
@@ -265,6 +287,10 @@
 
   .meme-canvas {
     width: 100% !important;
+  }
+
+  .editor-nav {
+    padding: 40px;
   }
 }
 
