@@ -4,9 +4,6 @@
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
   grid-template-areas: 'logo nav';
-  margin-top: 16px;
-  margin-bottom: 16px;
-  width: 100vw;
   height: fit-content;
   padding: 10px;
   border-radius: 37px;
@@ -103,6 +100,7 @@
     margin-top: 0 !important;
     border-radius: 0;
     padding-inline: 5vw;
+    width: 100%;
 
     /* height: fit-content; */
     align-items: flex-start;
@@ -126,6 +124,12 @@
 }
 
 @media (min-width: 721px) {
+  .main-header {
+    width: var(--m);
+    margin: auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
   .main-nav-gallery-list {
     display: block !important;
   }
@@ -144,4 +148,7 @@
 }
 
 @media (min-width: 1060px) {
+  .main-header {
+    width: var(--l);
+  }
 }

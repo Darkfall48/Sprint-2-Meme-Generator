@@ -164,7 +164,7 @@
   }
 }
 
-@media (min-width: 720px) {
+@media (min-width: 721px) {
   .gallery-nav-list {
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: 1fr 1fr;

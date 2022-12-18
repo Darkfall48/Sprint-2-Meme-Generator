@@ -258,7 +258,7 @@
   }
 }
 
-@media (min-width: 720px) {
+@media (min-width: 721px) {
   .meme-section {
     flex-direction: column;
   }
