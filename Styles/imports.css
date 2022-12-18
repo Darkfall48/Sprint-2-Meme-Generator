@@ -1,19 +1,19 @@
 /* Normalize */
-@import './Setup/normalize.css';
+@import 'Setup/normalize.css';
 
 /* Basic */
-@import './Basics/base.css';
-@import './Basics/helpers.css';
-@import './Basics/layouts.css';
+@import 'Basics/base.css';
+@import 'Basics/helpers.css';
+@import 'Basics/layouts.css';
 
 /* Setup */
-@import './Setup/vars.css';
-@import './Setup/fonts.css';
-@import './Setup/icons.css';
+@import 'Setup/vars.css';
+@import 'Setup/fonts.css';
+@import 'Setup/icons.css';
 
 /* Cmps */
-@import './Cmps/header.css';
-@import './Cmps/gallery.css';
-@import './Cmps/editor.css';
-@import './Cmps/about.css';
-@import './Cmps/footer.css';
+@import 'Cmps/header.css';
+@import 'Cmps/gallery.css';
+@import 'Cmps/editor.css';
+@import 'Cmps/about.css';
+@import 'Cmps/footer.css';
