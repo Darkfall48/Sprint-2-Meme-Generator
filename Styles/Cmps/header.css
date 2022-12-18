@@ -102,7 +102,6 @@
     position: fixed;
     margin-top: 0 !important;
     border-radius: 0;
-    width: 100vw !important;
     padding-inline: 5vw;
 
     /* height: fit-content; */

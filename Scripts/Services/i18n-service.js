@@ -64,8 +64,7 @@ var gTrans = {
   },
   'description-about-section': {
     en: `Since my childhood, I have always been passionate about new
-    technologies. I started with website and video game development as
-    well as arduino and robotics projects.
+    technologies. I started with website and video game development as well as arduino and robotics projects.
 
     I also managed a youtube channel until 2018.
 
@@ -76,7 +75,7 @@ var gTrans = {
     After finishing the army in 2021, I decided to undertake a
     professional training in Computer Engineering.
 
-    And now I am learning Full Stack Development.`,
+    And now, I am learning Full Stack Development.`,
     fr: `Depuis mon enfance, j'ai toujours été passionné par les nouvelles technologies. J'ai commencé par le développement de sites web et de jeux vidéo ainsi que par des projets arduino et robotiques.
     
     J'ai également géré une chaîne YouTube jusqu'en 2018.
