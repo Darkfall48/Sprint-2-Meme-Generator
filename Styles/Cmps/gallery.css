@@ -221,7 +221,7 @@
     overflow-y: scroll;
 
     height: 70vh;
-    padding-right: 40px;
+    padding-inline-end: 40px;
   }
 
   /* Scroll Bar - Main */
