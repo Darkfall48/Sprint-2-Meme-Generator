@@ -245,6 +245,8 @@
 @media (max-width: 720px) {
   .meme-section {
     flex-direction: column;
+    padding: auto;
+    padding-bottom: 0px;
     padding-top: 18vh;
   }
 
@@ -255,6 +257,7 @@
   .editor-container {
     flex-basis: 30%;
     background-color: none;
+    padding: auto;
   }
 
   .editor-nav {
@@ -262,7 +265,7 @@
     flex-direction: column;
     place-content: center;
     place-items: center;
-    padding: 10px;
+    padding: auto;
     padding-top: 20px;
     padding-bottom: 20px;
     /* padding: 40px; */
