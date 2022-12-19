@@ -21,6 +21,8 @@ function onInitMeme() {
   renderMeme()
 
   drawRectAfterSeconds(1)
+
+  updateInputLine()
 }
 
 function getCanvas() {
@@ -224,6 +226,17 @@ function onAddLine() {
   createLine()
   renderMeme()
   drawRectAfterSeconds(1)
+  updateInputLine()
+}
+
+function updateInputLine() {
+  const elInput = document.getElementById('text-input-editor')
+  const currentMeme = getMeme()
+
+  // TODO: If "New Line" put Place Holder
+  let lineValue = currentMeme.lines[currentMeme.selectedLineIdx].txt
+
+  elInput.value = lineValue
 }
 
 function onDeleteLine() {
@@ -231,6 +244,7 @@ function onDeleteLine() {
   deleteLine()
   renderMeme()
   drawRectAfterSeconds(1)
+  updateInputLine()
 }
 
 //? Resolved: ! Not working, Github Cross Origin not allowed

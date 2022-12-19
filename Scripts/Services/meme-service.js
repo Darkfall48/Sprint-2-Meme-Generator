@@ -60,6 +60,7 @@ function switchLine() {
 
   renderMeme()
   drawRectAfterSeconds(1)
+  updateInputLine()
 
   // console.log('Current Line is', gMeme.selectedLineIdx)
 }

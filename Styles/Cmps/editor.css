@@ -59,11 +59,13 @@
 }
 
 #text-input-editor {
-  text-align: center;
+  text-align: left;
   font-size: 1.5625em;
   font-family: poppins-medium;
   text-transform: uppercase;
   color: var(--clr8);
+  overflow: auto;
+  padding: 10px;
 }
 
 /** Lines and Movement Container **/
