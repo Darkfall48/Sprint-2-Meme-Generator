@@ -18,9 +18,9 @@
 
 .meme-canvas {
   border: 6px solid var(--clr0);
-
   place-self: center;
   border-radius: 25px;
+  margin-bottom: 8px;
 }
 
 /** Editor **/
@@ -48,6 +48,7 @@
 /** Text Input Container **/
 .text-input-container {
   height: 37px;
+  width: 80%;
   border-radius: 28px;
   box-shadow: 1px 5px 0 var(--clr6), inset 0 5px 0 var(--clr9);
   background-color: var(--clr7);
@@ -197,6 +198,7 @@
   border-radius: 45px;
   background-color: var(--clr9);
   color: black;
+  width: 80%;
   display: flex;
   margin-bottom: 25px;
   align-content: center;
@@ -246,6 +248,10 @@
     padding-top: 18vh;
   }
 
+  .meme-canvas {
+    width: 80vw !important;
+  }
+
   .editor-container {
     flex-basis: 30%;
     background-color: none;
@@ -262,42 +268,13 @@
     /* padding: 40px; */
   }
 
-  .meme-canvas {
-    width: 100% !important;
-    /* margin-inline-start: auto;
-    margin-inline-end: auto; */
-    margin-bottom: 8px;
-  }
-
-  .text-input-container {
-    width: 80vw;
-    /* margin-inline-start: auto;
-    margin-inline-end: auto; */
-  }
-
-  .sticker-container {
-    width: 80%;
-    /* margin-inline-start: auto;
-    margin-inline-end: auto; */
-  }
-
   .save-container {
+    width: 80%;
     flex-wrap: wrap;
   }
 }
 
 @media (min-width: 721px) {
-  .editor-nav {
-    display: flex;
-    flex-direction: column;
-    place-content: center;
-    place-items: center;
-    padding: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    /* padding: 40px; */
-  }
-
   .meme-section {
     flex-direction: column;
   }
@@ -307,16 +284,59 @@
   }
 
   .editor-nav {
+    display: grid;
+    /* grid-template-columns: repeat(2fr);
+    grid-template-rows: repeat(3fr); */
+    grid-template-areas: 'txt sticker' 'mov control' 'save save';
+    place-content: center;
+    place-items: center;
     padding: 40px;
+    row-gap: 36px;
+  }
+
+  .text-input-container {
+    grid-area: txt;
+    margin-bottom: 0;
+  }
+
+  .sticker-container {
+    grid-area: sticker;
+    margin-bottom: 0;
+  }
+
+  .lines-movement-container {
+    grid-area: mov;
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+
+  .text-control-container {
+    grid-area: control;
+    margin-bottom: 0;
+  }
+
+  .save-container {
+    grid-area: save;
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: 1060px) {
+  .editor-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
   .meme-section {
     flex-direction: row;
   }
 
   .meme-canvas {
     width: 450px !important;
+    margin-bottom: 0;
+  }
+
+  .lines-movement-container {
+    flex-direction: row-reverse;
   }
 }
