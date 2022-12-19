@@ -59,7 +59,7 @@
 }
 
 #text-input-editor {
-  text-align: left;
+  text-align: initial;
   font-size: 1.5625em;
   font-family: poppins-medium;
   text-transform: uppercase;
