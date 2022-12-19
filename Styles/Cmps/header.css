@@ -101,8 +101,6 @@
     border-radius: 0;
     padding-inline: 5vw;
     width: 100%;
-
-    /* height: fit-content; */
     align-items: flex-start;
 
     box-shadow: 1px 0px 8px 2px var(--clr-3);
