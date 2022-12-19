@@ -132,7 +132,8 @@
     display: block !important;
   }
   .main-nav-memes-list {
-    display: block !important;
+    /* display: block !important; */
+    /* TODO: Memes Menu Hided until it works! */
   }
   .main-nav-about-list {
     display: block !important;

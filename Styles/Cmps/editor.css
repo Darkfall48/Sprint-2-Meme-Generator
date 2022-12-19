@@ -290,7 +290,8 @@
     display: grid;
     /* grid-template-columns: repeat(2fr);
     grid-template-rows: repeat(3fr); */
-    grid-template-areas: 'txt sticker' 'mov control' 'save save';
+    /* grid-template-areas: 'txt sticker' 'mov control' 'save save'; */
+    grid-template-areas: 'txt save' 'mov control'; /*TODO: Until Sticker Container and Upload Button Works */
     place-content: center;
     place-items: center;
     padding: 40px;

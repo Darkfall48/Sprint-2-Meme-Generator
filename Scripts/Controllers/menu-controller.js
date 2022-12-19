@@ -22,7 +22,8 @@ function onShowOptions() {
   const elLangs = document.querySelector('.dropdown-langs')
 
   elGallery.classList.toggle('hide')
-  elMemes.classList.toggle('hide')
+  // elMemes.classList.toggle('hide') //TODO: Memes Menu Hided until it works!
+
   elAbout.classList.toggle('hide')
   elLangs.classList.toggle('hide')
 }
