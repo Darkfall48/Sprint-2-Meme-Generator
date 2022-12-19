@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   text-align: center;
+  touch-action: manipulation;
 }
 
 html {
